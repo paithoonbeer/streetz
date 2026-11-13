@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STREETZ #061 — นิตยสารสตรีทแฟชั่นทั่วโลก</title>
+  <meta name="description" content="STREETZ นิตยสารสตรีทแฟชั่นจากทุกประเทศ — Street Snap, Girl of the Month, Trend Check, ฟีลนิตยสารยุค 2000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bagel+Fat+One&family=Kanit:wght@400;500;600;700;800;900&family=Lilita+One&family=Permanent+Marker&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Rock+Salt&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --yellow: #ffe200;
+      --yellow-deep: #ffd000;
+      --pink: #ff2d8b;
+      --pink-hot: #ff4eb5;
+      --pink-ink: #ff1a80;
+      --lime: #c6ff3d;
+      --cyan: #3defff;
+      --red: #ff2c2c;
+      --orange: #ff7a00;
+      --black: #111111;
+      --ink: #161616;
+      --paper: #f4ece0;
+      --paper-2: #fffdf8;
+      --cream: #f7f0e4;
+      --tape: rgba(255, 236, 150, 0.72);
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Prompt", "Kanit", "Segoe UI", Tahoma, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* paper grain */
+    body::before {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 8000;
+      opacity: 0.07;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* ===== TOP TICKER ===== */
+    .ticker {
+      background: var(--black);
+      color: var(--yellow);
+      font-family: "Anton", "Prompt", sans-serif;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      overflow: hidden;
+      white-space: nowrap;
+      border-bottom: 3px solid var(--pink);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    }
+    .ticker-track {
+      display: inline-block;
+      padding: 0.45rem 0;
+      animation: tick 28s linear infinite;
+    }
+    @keyframes tick {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .ticker-track span { margin: 0 1.4rem; }
+    .ticker-track .dot { color: var(--pink); }
+
+    /* ===== NAV ===== */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.55rem 1.4rem;
+      background: var(--paper-2);
+      border-bottom: 3px solid var(--black);
+      position: relative;
+      z-index: 190;
+    }
+    .nav-brand {
+      font-family: "Bagel Fat One", "Lilita One", cursive;
+      font-size: 1.55rem;
+      color: var(--yellow);
+      -webkit-text-stroke: 1.5px #111;
+      text-shadow: 2px 2px 0 #111;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.15rem;
+      list-style: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+    .nav-links a:hover { color: var(--pink); }
+    .nav-issue {
+      font-family: "Anton", sans-serif;
+      background: var(--pink);
+      color: #fff;
+      padding: 0.2rem 0.55rem;
+      transform: rotate(-3deg);
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      box-shadow: 3px 3px 0 #111;
+    }
+    .nav-toggle {
+      display: none;
+      background: var(--yellow);
+      border: 2px solid #111;
+      padding: 0.25rem 0.55rem;
+      font-weight: 800;
+    }
+
+    /* ===== HERO COVER ===== */
+    .hero-wrap {
+      padding: 1.4rem 1.2rem 2.4rem;
+    }
+    .cover {
+      --cover-pad: clamp(3.1rem, 10.5cqi, 6rem);
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      background: #111;
+      aspect-ratio: 3 / 4.05;
+      max-height: calc(100vh - 7rem);
+      min-height: 620px;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 8px #fff,
+        0 0 0 11px #111,
+        18px 28px 60px rgba(0, 0, 0, 0.35);
+      isolation: isolate;
+      container-type: inline-size;
+      container-name: cover;
+    }
+    .cover-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 18%;
+      filter: contrast(1.08) saturate(1.12);
+    }
+    .cover-vignette {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.18) 0%, transparent 22%, transparent 62%, rgba(0,0,0,.55) 100%),
+        linear-gradient(90deg, rgba(0,0,0,.28) 0%, transparent 22%, transparent 78%, rgba(0,0,0,.28) 100%);
+      pointer-events: none;
+    }
+
+    .masthead {
+      position: absolute;
+      top: 2.1%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 8;
+      pointer-events: none;
+      padding: 0 var(--cover-pad);
+    }
+    .logo {
+      margin: 0;
+      line-height: 0;
+      font-weight: 400;
+    }
+    .logo svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      overflow: visible;
+    }
+    .logo-sub {
+      margin-top: 0.15em;
+      font-weight: 800;
+      font-size: clamp(0.52rem, 2.55cqi, 0.95rem);
+      letter-spacing: 0.07em;
+      color: #fff;
+      text-shadow: 0 1px 3px #000, 0 0 8px rgba(0,0,0,.5);
+      white-space: nowrap;
+      overflow: visible;
+    }
+
+    .issue-burst {
+      position: absolute;
+      top: 2.2%;
+      right: 1.5%;
+      z-index: 6;
+      width: clamp(44px, 9.2cqi, 86px);
+      height: clamp(44px, 9.2cqi, 86px);
+      background: var(--pink);
+      color: #fff;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      transform: rotate(12deg);
+      box-shadow: 3px 3px 0 #111;
+      text-align: center;
+      line-height: 1;
+    }
+    .issue-burst strong {
+      font-family: "Anton", sans-serif;
+      font-size: clamp(0.95rem, 3.3cqi, 1.7rem);
+      letter-spacing: 0.02em;
+      display: block;
+    }
+    .issue-burst small {
+      font-size: clamp(0.42rem, 1.15cqi, 0.62rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .price-tag {
+      position: absolute;
+      top: 2.4%;
+      left: 1.5%;
+      z-index: 6;
+      background: var(--yellow);
+      color: #111;
+      font-weight: 800;
+      padding: 0.3rem 0.45rem 0.22rem;
+      transform: rotate(-8deg);
+      box-shadow: 3px 3px 0 #111;
+      font-size: clamp(0.55rem, 1.7cqi, 0.78rem);
+      line-height: 1.2;
+    }
+    .price-tag em { font-style: normal; font-size: 1.2em; }
+
+    .cover-lines-left,
+    .cover-lines-right {
+      position: absolute;
+      top: 26%;
+      z-index: 6;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      width: min(34%, 230px);
+    }
+    .cover-lines-left { left: 2.4%; align-items: flex-start; }
+    .cover-lines-right { right: 2.4%; align-items: flex-end; text-align: right; }
+
+    .cline {
+      display: inline-block;
+      padding: 0.22rem 0.5rem;
+      font-weight: 800;
+      line-height: 1.25;
+      box-shadow: 3px 3px 0 rgba(0,0,0,.85);
+      max-width: 100%;
+    }
+    .cline.blk { background: #111; color: #fff; }
+    .cline.yel { background: var(--yellow); color: #111; }
+    .cline.pnk { background: var(--pink); color: #fff; }
+    .cline.wht { background: #fff; color: #111; }
+    .cline.lime { background: var(--lime); color: #111; }
+    .cline .en {
+      display: block;
+      font-family: "Anton", sans-serif;
+      letter-spacing: 0.04em;
+      font-size: 1.05rem;
+      font-weight: 400;
+    }
+    .cline .th { display: block; font-size: 0.78rem; font-weight: 700; }
+    .cline.sm { font-size: 0.78rem; }
+    .cline.rot1 { transform: rotate(-3deg); }
+    .cline.rot2 { transform: rotate(4deg); }
+    .cline.rot3 { transform: rotate(-6deg); }
+    .cline.rot4 { transform: rotate(5deg); }
+
+    /* scribbles */
+    .scribble {
+      position: absolute;
+      z-index: 7;
+      pointer-events: none;
+      font-family: "Permanent Marker", cursive;
+      color: var(--pink-ink);
+      text-shadow: 0 1px 0 rgba(255,255,255,.4);
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .scr-wow {
+      bottom: 28%;
+      right: 18%;
+      font-size: clamp(1.8rem, 5vw, 3.2rem);
+      transform: rotate(14deg);
+      color: var(--pink);
+    }
+    .scr-cute {
+      top: 48%;
+      left: 32%;
+      font-family: "Rock Salt", "Permanent Marker", cursive;
+      font-size: clamp(0.9rem, 2.4vw, 1.35rem);
+      transform: rotate(-18deg);
+      color: #fff;
+      text-shadow: 2px 2px 0 var(--pink), 0 0 6px #000;
+    }
+    .scr-must {
+      bottom: 16%;
+      left: 8%;
+      font-size: clamp(1.1rem, 3vw, 1.8rem);
+      transform: rotate(-8deg);
+    }
+    .scribble-svg {
+      position: absolute;
+      z-index: 7;
+      pointer-events: none;
+      overflow: visible;
+    }
+    .star-sticker {
+      position: absolute;
+      z-index: 8;
+      background: var(--lime);
+      color: #111;
+      font-family: "Anton", sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      padding: 0.55rem 0.45rem;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      width: 88px;
+      height: 88px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      transform: rotate(-16deg);
+      bottom: 22%;
+      right: 4%;
+      filter: drop-shadow(3px 3px 0 #111);
+    }
+    .badge-newface {
+      position: absolute;
+      z-index: 8;
+      bottom: 8%;
+      right: 7%;
+      background: #fff;
+      border: 3px solid #111;
+      border-radius: 50%;
+      width: 96px;
+      height: 96px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      transform: rotate(8deg);
+      box-shadow: 4px 4px 0 var(--pink);
+      font-family: "Anton", sans-serif;
+      line-height: 1.05;
+      letter-spacing: 0.03em;
+    }
+    .badge-newface span { font-size: 0.72rem; color: var(--pink); display: block; }
+    .badge-newface strong { font-size: 1.15rem; }
+
+    .cover-bottom-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 6;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 0.55rem;
+      padding: 0.45rem 0.6rem 0.5rem;
+      background: linear-gradient(transparent, rgba(0,0,0,.55));
+      color: #fff;
+      font-size: clamp(0.42rem, 1.65cqi, 0.68rem);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .cover-bottom-bar span { white-space: nowrap; }
+    @container cover (max-width: 430px) {
+      .cover-bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.08rem;
+        letter-spacing: 0.04em;
+        padding-bottom: 0.45rem;
+      }
+    }
+
+    /* ===== SECTIONS SHARED ===== */
+    .section {
+      padding: 3.2rem 1.3rem 3.6rem;
+      position: relative;
+    }
+    .wrap { max-width: 1140px; margin: 0 auto; }
+    .sec-kicker {
+      font-family: "Permanent Marker", cursive;
+      color: var(--pink);
+      font-size: 1.15rem;
+      transform: rotate(-4deg);
+      display: inline-block;
+      margin-bottom: 0.15rem;
+    }
+    .sec-title {
+      font-family: "Anton", "Kanit", sans-serif;
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      letter-spacing: 0.02em;
+      line-height: 0.9;
+      text-transform: uppercase;
+    }
+    .sec-title .th {
+      display: block;
+      font-family: "Kanit", "Prompt", sans-serif;
+      font-size: 0.32em;
+      letter-spacing: 0.06em;
+      font-weight: 800;
+      margin-top: 0.35em;
+      text-transform: none;
+    }
+    .underline-scribble {
+      width: 180px;
+      height: 14px;
+      margin: 0.15rem 0 1.2rem;
+    }
+
+    /* ===== WORLD / COUNTRY ===== */
+    .world { background: var(--paper-2); }
+    .picker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 1.1rem 0 1.8rem;
+    }
+    .pill {
+      border: 2px solid #111;
+      background: #fff;
+      padding: 0.28rem 0.75rem;
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 2px 2px 0 #111;
+      transition: transform 0.15s, background 0.15s, color 0.15s;
+    }
+    .pill:hover { transform: translate(-1px, -1px); }
+    .pill.active {
+      background: var(--pink);
+      color: #fff;
+    }
+
+    .feature-city {
+      display: none;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 1.4rem;
+      background: var(--yellow);
+      border: 3px solid #111;
+      padding: 1rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 8px 8px 0 #111;
+      position: relative;
+    }
+    .feature-city.open { display: grid; }
+    .feature-city img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border: 3px solid #111;
+      filter: contrast(1.05);
+    }
+    .feature-city h3 {
+      font-family: "Anton", sans-serif;
+      font-size: 2.6rem;
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.4rem;
+    }
+    .feature-city .where {
+      font-family: "Permanent Marker", cursive;
+      color: var(--pink);
+      margin-bottom: 0.6rem;
+    }
+    .close-feat {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      border: 2px solid #111;
+      background: #fff;
+      width: 32px;
+      height: 32px;
+      font-weight: 900;
+    }
+
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.35rem 1.1rem;
+    }
+    .city-card {
+      background: #fff;
+      border: 3px solid #111;
+      padding: 0.55rem 0.55rem 0.8rem;
+      position: relative;
+      box-shadow: 4px 5px 0 rgba(0,0,0,.85);
+      transform: rotate(var(--tilt, -1.4deg));
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .city-card:nth-child(even) { --tilt: 1.6deg; }
+    .city-card:nth-child(3n) { --tilt: -2.2deg; }
+    .city-card:hover,
+    .city-card.is-on {
+      transform: rotate(0deg) translateY(-6px) scale(1.03);
+      box-shadow: 7px 10px 0 #111;
+      z-index: 2;
+    }
+    .city-card.is-on { outline: 3px solid var(--pink); }
+    .city-card.hidden { display: none; }
+    .tape {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      width: 72px;
+      height: 22px;
+      background: var(--tape);
+      transform: translateX(-50%) rotate(var(--tr, -2deg));
+      box-shadow: 0 1px 2px rgba(0,0,0,.18);
+      z-index: 2;
+    }
+    .city-card:nth-child(odd) .tape { --tr: 3deg; width: 84px; }
+    .polaroid {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border: 2px solid #111;
+      background: #ddd;
+    }
+    .city-meta { padding: 0.55rem 0.2rem 0; }
+    .city-meta h3 {
+      font-family: "Anton", sans-serif;
+      font-size: 1.45rem;
+      letter-spacing: 0.03em;
+      line-height: 1;
+    }
+    .city-meta .area {
+      font-family: "Permanent Marker", cursive;
+      font-size: 0.78rem;
+      color: var(--pink);
+    }
+    .city-meta p {
+      font-size: 0.82rem;
+      margin-top: 0.3rem;
+      color: #222;
+    }
+    .stamp {
+      position: absolute;
+      top: 14px;
+      right: 10px;
+      border: 2px dashed var(--red);
+      color: var(--red);
+      font-family: "Anton", sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      padding: 0.12rem 0.3rem;
+      transform: rotate(12deg);
+      background: rgba(255,255,255,.75);
+    }
+
+    /* ===== STREET SNAP ===== */
+    .snap {
+      background: #1a1a1a;
+      color: #fff;
+    }
+    .snap .sec-title { color: var(--yellow); }
+    .snap-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 1.6rem;
+      align-items: start;
+      margin-top: 0.5rem;
+    }
+    .snap-main {
+      position: relative;
+      background: #fff;
+      color: #111;
+      padding: 0.7rem;
+      border: 3px solid #111;
+      box-shadow: 10px 10px 0 var(--pink);
+      transform: rotate(-1deg);
+    }
+    .snap-main img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: 50% 20%;
+      border: 2px solid #111;
+    }
+    .snap-cap {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.55rem 0.2rem 0.2rem;
+      font-weight: 700;
+    }
+    .snap-cap .who { font-family: "Anton", sans-serif; font-size: 1.5rem; letter-spacing: 0.03em; }
+    .corner-tape {
+      position: absolute;
+      width: 90px;
+      height: 28px;
+      background: var(--tape);
+      box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    }
+    .corner-tape.tl { top: -10px; left: 20px; transform: rotate(-8deg); }
+    .corner-tape.tr { top: -8px; right: 30px; transform: rotate(6deg); }
+
+    .snap-side { display: flex; flex-direction: column; gap: 1rem; }
+    .of-month {
+      background: var(--paper-2);
+      color: #111;
+      border: 3px solid #fff;
+      padding: 1rem 1.05rem 1.15rem;
+      position: relative;
+    }
+    .of-month.boy { background: var(--cyan); }
+    .of-month.girl { background: var(--yellow); }
+    .of-month h3 {
+      font-family: "Anton", sans-serif;
+      font-size: 1.7rem;
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+    }
+    .of-month .tag {
+      font-family: "Permanent Marker", cursive;
+      color: var(--pink);
+      font-size: 0.95rem;
+    }
+    .of-month p { margin-top: 0.45rem; font-size: 0.92rem; }
+    .duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    .duo img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border: 3px solid #111;
+      transform: rotate(var(--r, -2deg));
+    }
+    .note-hand {
+      font-family: "Rock Salt", "Permanent Marker", cursive;
+      color: var(--pink-hot);
+      font-size: 0.85rem;
+      transform: rotate(-3deg);
+      margin-top: 0.4rem;
+    }
+
+    /* ===== TREND CHECK ===== */
+    .trends {
+      background: var(--yellow);
+      background-image: repeating-linear-gradient(
+        -12deg,
+        transparent,
+        transparent 18px,
+        rgba(255,255,255,.18) 18px,
+        rgba(255,255,255,.18) 20px
+      );
+    }
+    .trend-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem 1.2rem;
+      margin-top: 0.4rem;
+    }
+    .trend-item {
+      background: #fff;
+      border: 3px solid #111;
+      padding: 0.85rem 0.95rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      box-shadow: 4px 4px 0 #111;
+      transform: rotate(var(--t, 0deg));
+    }
+    .trend-item:nth-child(odd) { --t: -0.7deg; }
+    .trend-item:nth-child(even) { --t: 0.8deg; }
+    .num {
+      width: 46px;
+      height: 46px;
+      background: var(--pink);
+      color: #fff;
+      font-family: "Anton", sans-serif;
+      font-size: 1.4rem;
+      display: grid;
+      place-items: center;
+      border: 2px solid #111;
+      transform: rotate(-8deg);
+      flex-shrink: 0;
+    }
+    .trend-item:nth-child(3n) .num { background: #111; color: var(--yellow); }
+    .trend-item:nth-child(4n) .num { background: var(--lime); color: #111; }
+    .trend-item h3 {
+      font-size: 1.05rem;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+    .trend-item h3 em {
+      font-style: normal;
+      font-family: "Anton", sans-serif;
+      letter-spacing: 0.03em;
+      color: var(--pink);
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 400;
+    }
+    .trend-item p { font-size: 0.85rem; margin-top: 0.15rem; }
+
+    /* ===== BACK ISSUES ===== */
+    .back {
+      background: var(--pink);
+      overflow: hidden;
+    }
+    .back .sec-title { color: #fff; text-shadow: 3px 3px 0 #111; }
+    .back .sec-kicker { color: var(--yellow); }
+    .collage {
+      position: relative;
+      min-height: 640px;
+      margin-top: 1rem;
+    }
+    .mini-cover {
+      position: absolute;
+      width: 200px;
+      background: #111;
+      border: 5px solid #fff;
+      box-shadow: 8px 12px 24px rgba(0,0,0,.35);
+      transform: rotate(var(--r, 0deg));
+      transition: transform 0.22s, z-index 0s;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .mini-cover:hover {
+      transform: rotate(0deg) scale(1.08);
+      z-index: 20 !important;
+    }
+    .mini-cover img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: 50% 20%;
+    }
+    .mini-top {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: "Bagel Fat One", "Lilita One", cursive;
+      color: var(--yellow);
+      font-size: 1.55rem;
+      line-height: 1;
+      text-shadow: 2px 2px 0 #111;
+      z-index: 2;
+    }
+    .mini-no {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: var(--pink);
+      color: #fff;
+      font-family: "Anton", sans-serif;
+      padding: 0.1rem 0.4rem;
+      font-size: 0.9rem;
+      box-shadow: 2px 2px 0 #111;
+    }
+    .mini-tape {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      width: 70px;
+      height: 20px;
+      background: var(--tape);
+      transform: translateX(-50%) rotate(-3deg);
+      z-index: 3;
+    }
+    /* positions */
+    .c1 { top: 20px; left: 2%; --r: -8deg; z-index: 3; }
+    .c2 { top: 80px; left: 20%; --r: 6deg; z-index: 4; }
+    .c3 { top: 10px; left: 40%; --r: -3deg; z-index: 2; }
+    .c4 { top: 90px; left: 58%; --r: 9deg; z-index: 5; }
+    .c5 { top: 20px; left: 76%; --r: -6deg; z-index: 3; }
+    .c6 { top: 340px; left: 10%; --r: 5deg; z-index: 4; }
+    .c7 { top: 330px; left: 32%; --r: -7deg; z-index: 3; }
+    .c8 { top: 350px; left: 54%; --r: 4deg; z-index: 5; }
+    .c9 { top: 320px; left: 74%; --r: -5deg; z-index: 4; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 2.4rem 1.3rem 2rem;
+      text-align: center;
+    }
+    .foot-logo {
+      font-family: "Bagel Fat One", "Lilita One", cursive;
+      font-size: 3.2rem;
+      color: var(--yellow);
+      line-height: 0.9;
+      text-shadow: 3px 3px 0 var(--pink);
+    }
+    footer p { margin-top: 0.55rem; font-size: 0.9rem; color: #ddd; padding: 0 0.6rem; }
+    footer small { display: block; margin-top: 0.7rem; color: #999; font-size: 0.75rem; }
+
+    /* lightbox */
+    .lb {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.78);
+      z-index: 9000;
+      place-items: center;
+      padding: 1.2rem;
+    }
+    .lb.open { display: grid; }
+    .lb img {
+      max-width: min(90vw, 720px);
+      max-height: 86vh;
+      object-fit: contain;
+      border: 8px solid #fff;
+      box-shadow: 0 20px 60px #000;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 980px) {
+      .city-grid { grid-template-columns: repeat(2, 1fr); }
+      .snap-grid, .feature-city, .trend-list { grid-template-columns: 1fr; }
+      .snap-main img { height: 420px; }
+      .feature-city img { height: 260px; }
+      .collage { min-height: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .mini-cover { position: relative; top: auto !important; left: auto !important; width: 100%; margin: 0 auto; }
+      .cover { max-height: none; aspect-ratio: 3 / 4.2; }
+    }
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-bottom: 3px solid #111;
+        padding: 0.8rem 1.2rem 1rem;
+        gap: 0.55rem;
+      }
+      .nav { justify-content: flex-start; }
+      .nav-toggle { display: block; margin-left: auto; }
+      .cover { min-height: 0; aspect-ratio: 3 / 4.55; }
+      .cover-lines-left, .cover-lines-right { width: min(42%, 180px); top: 22%; gap: 0.35rem; }
+      .cline { padding: 0.14rem 0.35rem; }
+      .cline .en { font-size: 0.78rem; }
+      .cline .th { font-size: 0.62rem; }
+      .badge-newface { width: 74px; height: 74px; }
+      .badge-newface strong { font-size: 0.85rem; }
+      .star-sticker { width: 70px; height: 70px; font-size: 0.75rem; }
+      .price-tag { font-size: 0.62rem; top: 2.8%; left: 1.8%; padding: 0.28rem 0.4rem 0.2rem; }
+      .city-grid { grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+      .polaroid { height: 160px; }
+      .trend-list { grid-template-columns: 1fr; }
+      .collage { grid-template-columns: 1fr 1fr; }
+      .city-card { transform: rotate(var(--tilt, -0.8deg)); }
+    }
+    @media (max-width: 420px) {
+      .cover-lines-right .cline:nth-child(n+3),
+      .cover-lines-left .cline:nth-child(n+4) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>STREETZ #061</span><span class="dot">●</span>
+      <span>STREET SNAP</span><span class="dot">●</span>
+      <span>GIRL OF THE MONTH</span><span class="dot">●</span>
+      <span>BOY OF THE MONTH</span><span class="dot">●</span>
+      <span>NEW FACE</span><span class="dot">●</span>
+      <span>TREND CHECK</span><span class="dot">●</span>
+      <span>TOKYO / SEOUL / BANGKOK / LONDON / PARIS / NY / CPH / LAGOS</span><span class="dot">●</span>
+      <span>นิตยสารสตรีทแฟชั่นทั่วโลก</span><span class="dot">●</span>
+      <span>STREETZ #061</span><span class="dot">●</span>
+      <span>STREET SNAP</span><span class="dot">●</span>
+      <span>GIRL OF THE MONTH</span><span class="dot">●</span>
+      <span>BOY OF THE MONTH</span><span class="dot">●</span>
+      <span>NEW FACE</span><span class="dot">●</span>
+      <span>TREND CHECK</span><span class="dot">●</span>
+      <span>TOKYO / SEOUL / BANGKOK / LONDON / PARIS / NY / CPH / LAGOS</span><span class="dot">●</span>
+      <span>นิตยสารสตรีทแฟชั่นทั่วโลก</span><span class="dot">●</span>
+    </div>
+  </div>
+
+  <header class="nav">
+    <a class="nav-brand" href="#cover">STREETZ</a>
+    <button class="nav-toggle" type="button" aria-label="เมนู" id="navToggle">MENU</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#world">World Street</a></li>
+      <li><a href="#snap">Street Snap</a></li>
+      <li><a href="#trends">Trend Check</a></li>
+      <li><a href="#back">Back Issues</a></li>
+    </ul>
+    <div class="nav-issue">#061</div>
+  </header>
+
+  <!-- HERO COVER -->
+  <section class="hero-wrap" id="cover">
+    <article class="cover" aria-label="ปกนิตยสาร STREETZ ฉบับ 061">
+      <img class="cover-photo"
+        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+        alt="สาวสตรีทลุคสีเหลืองสด ถ่ายแบบปกนิตยสาร" width="1200" height="1600" />
+      <div class="cover-vignette"></div>
+
+      <div class="price-tag">NOV ’26<br><em>89 ฿</em></div>
+
+      <div class="masthead">
+        <h1 class="logo">
+          <svg viewBox="0 0 1000 240" role="img" aria-label="STREETZ" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <filter id="streetz-shadow" x="-12%" y="-12%" width="130%" height="145%">
+                <feOffset in="SourceAlpha" dx="9" dy="9" result="off"/>
+                <feFlood flood-color="#111111" result="color"/>
+                <feComposite in="color" in2="off" operator="in" result="shadow"/>
+                <feMerge>
+                  <feMergeNode in="shadow"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <text
+              x="500"
+              y="178"
+              text-anchor="middle"
+              font-family="'Bagel Fat One', 'Lilita One', cursive"
+              font-size="198"
+              fill="#ffe200"
+              filter="url(#streetz-shadow)"
+              textLength="820"
+              lengthAdjust="spacingAndGlyphs"
+            ><tspan rotate="-3.2 2.4 -2.1 3.2 -2.6 3.8 -3.8">STREETZ</tspan></text>
+          </svg>
+        </h1>
+        <p class="logo-sub">นิตยสารสตรีทแฟชั่นทั่วโลก</p>
+      </div>
+
+      <div class="issue-burst" aria-hidden="true">
+        <div><strong>#061</strong><small>ISSUE</small></div>
+      </div>
+
+      <div class="cover-lines-left">
+        <div class="cline yel rot1">
+          <span class="en">STREET SNAP</span>
+          <span class="th">สตรีทสแนปทั่วโลก</span>
+        </div>
+        <div class="cline blk rot3">
+          <span class="en">GIRL OF THE MONTH</span>
+          <span class="th">สาวสยามลุคนี้ปังมาก</span>
+        </div>
+        <div class="cline pnk rot2 sm">
+          <span class="en">HARAJUKU SPECIAL</span>
+          <span class="th">ไปโยโกะกับเราไหม?</span>
+        </div>
+        <div class="cline wht rot1 sm">
+          <span class="th">ทรงผมยุคนี้ต้องเซอร์</span>
+        </div>
+      </div>
+
+      <div class="cover-lines-right">
+        <div class="cline lime rot4">
+          <span class="en">NEW FACE</span>
+          <span class="th">เปิดตัวน้องใหม่</span>
+        </div>
+        <div class="cline blk rot2">
+          <span class="en">BOY OF THE MONTH</span>
+          <span class="th">พี่คนนี้ที่ชิค</span>
+        </div>
+        <div class="cline yel rot3 sm">
+          <span class="en">TREND CHECK</span>
+          <span class="th">ของมันต้องมีในตู้</span>
+        </div>
+        <div class="cline pnk rot1 sm">
+          <span class="th">รองเท้าคู่ไหนปัง?</span>
+        </div>
+      </div>
+
+      <!-- marker scribbles -->
+      <svg class="scribble-svg" viewBox="0 0 200 130" style="width:38%; left:28%; top:36%;" aria-hidden="true">
+        <ellipse cx="100" cy="65" rx="84" ry="50" fill="none" stroke="#ff1a80" stroke-width="4.5" stroke-linecap="round" transform="rotate(-11 100 65)" opacity="0.92"/>
+        <ellipse cx="103" cy="67" rx="78" ry="44" fill="none" stroke="#ff1a80" stroke-width="2.2" transform="rotate(-8 100 65)" opacity="0.55"/>
+      </svg>
+      <svg class="scribble-svg" viewBox="0 0 80 80" style="width:16%; right:22%; bottom:30%;" aria-hidden="true">
+        <path d="M12 40 L68 28" stroke="#ff1a80" stroke-width="5" stroke-linecap="round"/>
+        <path d="M58 18 L70 30 L54 38" fill="none" stroke="#ff1a80" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="scribble-svg" viewBox="0 0 60 60" style="width:11%; left:40%; top:22%;" aria-hidden="true">
+        <path d="M30 4 L36 22 L55 22 L40 34 L46 52 L30 40 L14 52 L20 34 L5 22 L24 22 Z" fill="#ff1a80"/>
+      </svg>
+
+      <div class="scribble scr-cute">so cute!!!</div>
+      <div class="scribble scr-wow">WOW!!</div>
+      <div class="scribble scr-must">ต้องมี!!</div>
+
+      <div class="star-sticker" aria-hidden="true">HOT!!</div>
+      <div class="badge-newface"><span>THIS MONTH</span><strong>NEW<br>FACE</strong></div>
+
+      <div class="cover-bottom-bar">
+        <span>World Street — Tokyo · Seoul · Bangkok · London</span>
+        <span>streetzine.world</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- WORLD STREET / COUNTRY PICKER -->
+  <section class="section world" id="world">
+    <div class="wrap">
+      <div class="sec-kicker">เลือกเมือง แล้วไปเดินสตรีทด้วยกัน</div>
+      <h2 class="sec-title">WORLD STREET <span class="th">สตรีทแฟชั่นจากทุกประเทศ</span></h2>
+      <svg class="underline-scribble" viewBox="0 0 180 14" aria-hidden="true">
+        <path d="M2 9 Q 40 2, 80 8 T 178 6" fill="none" stroke="#ff1a80" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+
+      <div class="picker" role="tablist" aria-label="เลือกเมือง">
+        <button class="pill active" type="button" data-filter="all">ทั้งหมด</button>
+        <button class="pill" type="button" data-filter="tokyo">Tokyo</button>
+        <button class="pill" type="button" data-filter="seoul">Seoul</button>
+        <button class="pill" type="button" data-filter="bangkok">Bangkok</button>
+        <button class="pill" type="button" data-filter="london">London</button>
+        <button class="pill" type="button" data-filter="paris">Paris</button>
+        <button class="pill" type="button" data-filter="newyork">New York</button>
+        <button class="pill" type="button" data-filter="copenhagen">Copenhagen</button>
+        <button class="pill" type="button" data-filter="lagos">Lagos</button>
+      </div>
+
+      <div class="feature-city" id="featureCity">
+        <img id="featImg" alt="" />
+        <div>
+          <button class="close-feat" type="button" id="closeFeat" aria-label="ปิด">×</button>
+          <div class="where" id="featWhere"></div>
+          <h3 id="featName"></h3>
+          <p id="featNotes"></p>
+        </div>
+      </div>
+
+      <div class="city-grid" id="cityGrid">
+        <article class="city-card" data-city="tokyo" data-region="asia">
+          <div class="tape"></div>
+          <span class="stamp">SNAP!</span>
+          <img class="polaroid" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="สตรีทสแนปที่ฮาราจูกุ โตเกียว" width="800" height="1000" />
+          <div class="city-meta">
+            <h3>TOKYO</h3>
+            <div class="area">Harajuku / 原宿</div>
+            <p>เลเยอร์จัดเต็ม ผมสีสด ส้นเตี้ยคู่กระโปรงบอลลูน — สนับสีจัดแบบไม่กลัวผิด</p>
+          </div>
+        </article>
+
+        <article class="city-card" data-city="seoul" data-region="asia">
+          <div class="tape"></div>
+          <span class="stamp">HOT</span>
+          <img class="polaroid" src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์โซล" width="800" height="1000" />
+          <div class="city-meta">
+            <h3>SEOUL</h3>
+            <div class="area">Hongdae / 홍대</div>
+            <p>คลีนแต่เท่ กางเกงวอร์มตัดสตรีทแบรนด์ เครื่องประดับมินิมอล ผิวโกลว์</p>
+          </div>
+        </article>
+
+        <article class="city-card" data-city="bangkok" data-region="asia">
+          <div class="tape"></div>
+          <span class="stamp">SIAM</span>
+          <img class="polaroid" src="https://images.unsplash.com/photo-1513379733131-47fc74b45fc7?auto=format&fit=crop&w=800&q=80" alt="สตรีทแฟชั่นสยาม กรุงเทพ" width="800" height="1000" />
+          <div class="city-meta">
+            <h3>BANGKOK</h3>
+            <div class="area">สยาม / MBK</div>
+            <p>ช้อปสยามแบบเดิมๆ ที่ใหม่เสมอ — เสื้อครอป ยีนส์เอวต่ำ รองเท้าผ้าใบสก๊อย</p>
+          </div>
+        </article>
+
+        <article class="city-card" data-city="london" data-region="europe">
+          <div class="tape"></div>
+          <span class="stamp">UK</span>
+          <img class="polaroid" src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์ลอนดอน" width="800" height="1000" />
+          <div class="city-meta">
+            <h3>LONDON</h3>
+            <div class="area">Shoreditch</div>
+            <p>มาร์เทนส์ แจ็กเก็ตหนัง ลายสก๊อต กับวินเทจตลาดพอร์โตเบลโลที่ยังชนะ</p>
+          </div>
+        </article>
+
+        <article class="city-card" data-city="paris" data-region="europe">
+          <div class="tape"></div>
+          <span class="stamp">CHIC</span>
+          <img class="polaroid" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80" alt="แฟชั่นริมถนนปารีส" width="800" height="1000" />
+          <div class="city-meta">
+            <h3>PARIS</h3>
+            <div class="area">Le Marais</div>
+            <p>เสื้อคลุมยาว กาแฟริมทาง โทนนู้ดตัดรองเท้าแดง — ดูไม่ได้ตั้งใจ แต่ปัง</p>
+          </div>
+        </article>
+
+        <article class="city-card" data-city="newyork" data-region="americas">
+          <div class="tape"></div>
+          <span class="stamp">NYC</span>
+          <img class="polaroid" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์นิวยอร์ก" width="800" height="1000" />
+          <div class="city-meta">
+            <h3>NEW YORK</h3>
+            <div class="area">SoHo / Downtown</div>
+            <p>ฮู๊ดโอเวอร์ไซส์ หมวกแก๊ป สตรีทยอร์กแบบเดินไปทำงานแต่หน้าปกได้</p>
+          </div>
+        </article>
+
+        <article class="city-card" data-city="copenhagen" data-region="europe">
+          <div class="tape"></div>
+          <span class="stamp">COOL</span>
+          <img class="polaroid" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์โคเปนเฮเกน" width="800" height="1000" />
+          <div class="city-meta">
+            <h3>COPENHAGEN</h3>
+            <div class="area">Nørrebro</div>
+            <p>สคานดิสตรีท เสื้อไหมพรม โทนเอิร์ธ จักรยานคู่รองเท้า — เรียบแต่มีเลเยอร์</p>
+          </div>
+        </article>
+
+        <article class="city-card" data-city="lagos" data-region="africa">
+          <div class="tape"></div>
+          <span class="stamp">VIBE</span>
+          <img class="polaroid" src="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์เลกอส" width="800" height="1000" />
+          <div class="city-meta">
+            <h3>LAGOS</h3>
+            <div class="area">Victoria Island</div>
+            <p>สีจัดลายแอนคาราตัดสตรีทแวร์ เครื่องประดับใหญ่สะดุดตา สีสันไม่เคยเบา</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STREET SNAP OF THE MONTH -->
+  <section class="section snap" id="snap">
+    <div class="wrap">
+      <div class="sec-kicker">แอบส่องที่สยาม เมื่อวันเสาร์นั้น</div>
+      <h2 class="sec-title">STREET SNAP <span class="th">สตรีทสแนปแห่งเดือน</span></h2>
+      <svg class="underline-scribble" viewBox="0 0 180 14" aria-hidden="true">
+        <path d="M3 8 Q 50 1, 90 10 T 176 5" fill="none" stroke="#ffe200" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+
+      <div class="snap-grid">
+        <div class="snap-main">
+          <div class="corner-tape tl"></div>
+          <div class="corner-tape tr"></div>
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80" alt="แพร สาวแห่งเดือน ในลุคสีเหลืองนอกสยามสกแวร์" width="1000" height="1300" />
+          <div class="scribble" style="position:absolute;top:18%;right:10%;font-size:1.6rem;transform:rotate(12deg);color:#ff1a80;">iconic.</div>
+          <div class="snap-cap">
+            <span class="who">แพร — SIAM SQ.</span>
+            <span>12 NOV 26</span>
+          </div>
+        </div>
+
+        <div class="snap-side">
+          <div class="of-month girl">
+            <div class="tag">Girl of the month</div>
+            <h3>สาวแห่งเดือน : แพร</h3>
+            <p>เจอแพรที่บันไดสยาม ใส่เสื้อเหลืองฉูดกับยีนส์เอวต่ำ คาดเข็มขัดเงิน — ฟีลนิตยสารยุค 2000 แบบไม่ตั้งใจ บอกว่าเช้านี้เพิ่งซื้อกิ๊บเพชรมาจากเอ็มบีเค</p>
+            <p class="note-hand">ต้องมีกิ๊บอันนี้!!</p>
+          </div>
+
+          <div class="of-month boy">
+            <div class="tag">Boy of the month</div>
+            <h3>หนุ่มแห่งเดือน : ภีม</h3>
+            <p>ภีมจากทองหล่อ ลุคเบจ-น้ำตาลเรียบแต่ตัดทรงเป๊ะ แจ็กเก็ตบางกับรองเท้าหนังกลับ — สตรีทแบบผู้ใหญ่ยังชิคอยู่</p>
+          </div>
+
+          <div class="duo">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=700&q=80" alt="พอร์เทรตสาวสตรีท โทนอ่อน" style="--r:-3deg" width="700" height="900" />
+            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=700&q=80" alt="พอร์เทรตหนุ่มสตรีทลุคเบจ" style="--r:2.5deg" width="700" height="900" />
+          </div>
+          <p class="note-hand" style="color:#ffe200;">New Face เดือนนี้มี 2 คนเลย!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREND CHECK -->
+  <section class="section trends" id="trends">
+    <div class="wrap">
+      <div class="sec-kicker">เช็กเลย ของมันต้องมี</div>
+      <h2 class="sec-title">TREND CHECK <span class="th">เทรนด์ที่ต้องมีในตู้เดือนนี้</span></h2>
+      <svg class="underline-scribble" viewBox="0 0 180 14" aria-hidden="true">
+        <path d="M2 10 Q 45 2, 88 9 T 178 4" fill="none" stroke="#ff1a80" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+
+      <ol class="trend-list">
+        <li class="trend-item">
+          <div class="num">01</div>
+          <div>
+            <h3>ยีนส์เอวต่ำกลับมาแล้ว <em>LOW-RISE IS BACK</em></h3>
+            <p>อย่าเพิ่งเผากางเกงตัวเก่า — เอวต่ำยุค 2000 กลับมาคู่เสื้อครอปสั้นที่สุดในตู้</p>
+          </div>
+        </li>
+        <li class="trend-item">
+          <div class="num">02</div>
+          <div>
+            <h3>กิ๊บเพชรวับวับ <em>RHINESTONE CLIPS</em></h3>
+            <p>ติดข้างละ 3 อัน ยิ่งเยอะยิ่งชนะ ไฮไลต์ของสาวสยามสัปดาห์นี้</p>
+          </div>
+        </li>
+        <li class="trend-item">
+          <div class="num">03</div>
+          <div>
+            <h3>กระเป๋ามินิจนเกือบไม่มีช่อง <em>MICRO BAG</em></h3>
+            <p>ใส่ได้แค่ลิปกับมือถือ — แต่เดินผ่านแล้วต้องหัน</p>
+          </div>
+        </li>
+        <li class="trend-item">
+          <div class="num">04</div>
+          <div>
+            <h3>รองเท้าแมตช์ทั้งลุค <em>TONE-ON-TONE KICKS</em></h3>
+            <p>ผ้าใบโทนเดียวกับเสื้อ หรือสวนสีจัดๆ ก็ได้ ขอแค่ตั้งใจ</p>
+          </div>
+        </li>
+        <li class="trend-item">
+          <div class="num">05</div>
+          <div>
+            <h3>เสื้อตาข่ายเลเยอร์ <em>MESH ON TOP</em></h3>
+            <p>ใส่ทับเสื้อสายเดี่ยว หรือโชว์ผิวบางๆ แบบนิตยสารเก่าที่ยังเท่</p>
+          </div>
+        </li>
+        <li class="trend-item">
+          <div class="num">06</div>
+          <div>
+            <h3>เข็มกลัดสะสมปักท่วม <em>PIN COLLECTING</em></h3>
+            <p>แขนกระเป๋า หน้าหมวก อกแจ็กเก็ต — ยิ่งสุ่มยิ่งเป็นตัวเอง</p>
+          </div>
+        </li>
+        <li class="trend-item">
+          <div class="num">07</div>
+          <div>
+            <h3>แขนยาวโผล่ใต้เสื้อยืด <em>DOUBLE SLEEVE</em></h3>
+            <p>เลเยอร์แบบไม่ร้อนเกิน ตัดลายทางกับสีพื้น ได้อารมณ์ฮาราจูกุเบาๆ</p>
+          </div>
+        </li>
+        <li class="trend-item">
+          <div class="num">08</div>
+          <div>
+            <h3>โทนเหลืองตัดชมพูนีออน <em>Y2K COLOR CLASH</em></h3>
+            <p>สีปก STREETZ เดือนนี้ คือสีที่ควรมีบนตัวด้วย — กล้าแล้วปัง</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- BACK ISSUES -->
+  <section class="section back" id="back">
+    <div class="wrap">
+      <div class="sec-kicker">เก็บทุกฉบับ วางซ้อนบนโต๊ะ</div>
+      <h2 class="sec-title">BACK ISSUES <span class="th">ปกเก่าที่ยังชิค — คลิกดูใกล้ๆ</span></h2>
+
+      <div class="collage">
+        <article class="mini-cover c1" style="--r:-8deg">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 060" width="600" height="800" />
+          <span class="mini-no">#060</span>
+        </article>
+        <article class="mini-cover c2">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 059" width="600" height="800" />
+          <span class="mini-no">#059</span>
+        </article>
+        <article class="mini-cover c3">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 058" width="600" height="800" />
+          <span class="mini-no">#058</span>
+        </article>
+        <article class="mini-cover c4">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 057" width="600" height="800" />
+          <span class="mini-no">#057</span>
+        </article>
+        <article class="mini-cover c5">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 056" width="600" height="800" />
+          <span class="mini-no">#056</span>
+        </article>
+        <article class="mini-cover c6">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 055" width="600" height="800" />
+          <span class="mini-no">#055</span>
+        </article>
+        <article class="mini-cover c7">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 054" width="600" height="800" />
+          <span class="mini-no">#054</span>
+        </article>
+        <article class="mini-cover c8">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 053" width="600" height="800" />
+          <span class="mini-no">#053</span>
+        </article>
+        <article class="mini-cover c9">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 052" width="600" height="800" />
+          <span class="mini-no">#052</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo">STREETZ</div>
+    <p>นิตยสารสตรีทแฟชั่นทั่วโลก — ฉบับทดลอง <span style="white-space:nowrap">#061 · NOV 2026</span></p>
+    <p>Street Snap · Girl / Boy of the Month · New Face · Trend Check</p>
+    <small>ต้นแบบเว็บสไตล์นิตยสารสตรีทยุค 2000 — ภาพจาก Unsplash (ไม่ใช้ปกนิตยสารจริง) · STREETZ เป็นชื่อต้นแบบอิสระ</small>
+  </footer>
+
+  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="ดูรูปขยาย">
+    <img id="lbImg" alt="" />
+  </div>
+
+  <script>
+    (function () {
+      const notes = {
+        tokyo: {
+          where: "Japan — Harajuku",
+          name: "TOKYO",
+          notes: "ฮาราจูกุยังเป็นมหาสมุทรของสไตล์ — เลเยอร์ ลายเส้น ผมสี และรองเท้าที่ไม่มีสูตรสำเร็จ เดินTakeshita วันเดียวเก็บสแนปได้ทั้งฉบับ เดือนนี้ทีมเราโฟกัสลุคบอลลูนสเกิร์ตคู่สนับสีจัด.",
+          img: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=80"
+        },
+        seoul: {
+          where: "Korea — Hongdae",
+          name: "SEOUL",
+          notes: "ฮงแดคือห้องทดลองของคลีนสตรีท โทนนิวทรัลตัดรายละเอียดเล็กๆ อย่างกิ๊บและเครื่องประดับมินิมอล ลุคดูแพงโดยไม่ต้องตะโกน — สาวไทยเบิ้ลสไตล์นี้ที่สยามบ่อยมาก.",
+          img: "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=1000&q=80"
+        },
+        bangkok: {
+          where: "Thailand — สยาม / MBK",
+          name: "BANGKOK",
+          notes: "สยามสกแวร์คือรันเวย์ดั้งเดิมของนิตยสารแนวนี้ ครอปท็อป ยีนส์เอวต่ำ ผ้าใบสก๊อย และกิ๊บเพชรที่เพิ่งซื้อมาจากเอ็มบีเค แดดบ่ายกับบันไดเลื่อนคือแสงสวยที่สุดในเมือง.",
+          img: "https://images.unsplash.com/photo-1513379733131-47fc74b45fc7?auto=format&fit=crop&w=1000&q=80"
+        },
+        london: {
+          where: "UK — Shoreditch",
+          name: "LONDON",
+          notes: "ลอนดอนไม่เคยวางมาร์เทนส์ลง พอร์โตเบลโลและโซดิทช์ยังเป็นแหล่งวินเทจชั้นดี แจ็กเก็ตหนัง ลายสก๊อต และเสื้อถักที่ไม่เข้าชุดแต่เข้ากัน — สตรีทที่ดูผ่านลมฝนมาแล้ว.",
+          img: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1000&q=80"
+        },
+        paris: {
+          where: "France — Le Marais",
+          name: "PARIS",
+          notes: "ปารีสไม่ได้มีแค่แบรนด์หรู ริมคลองแซงต์มาร์แต็งคนใส่เสื้อคลุมยาวโทนนู้ด ตัดรองเท้าสีจัด ดูเหมือนยังไม่แต่งแต่กล้องจับแล้วกลายเป็นปก.",
+          img: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80"
+        },
+        newyork: {
+          where: "USA — SoHo / Downtown",
+          name: "NEW YORK",
+          notes: "นิวยอร์กคือสตรีทแบบไม่ตั้งใจที่ตั้งใจมาก ฮู๊ดโอเวอร์ไซส์ หมวกแก๊ป กางเกงทรงกว้าง เดินข้ามบล็อกไปทำงานแต่ดูเหมือนถ่ายแบบอยู่แล้ว.",
+          img: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=1000&q=80"
+        },
+        copenhagen: {
+          where: "Denmark — Nørrebro",
+          name: "COPENHAGEN",
+          notes: "สคานดิเนเวียไม่ได้มีแค่มินิมอล นอร์เรโบรมีเลเยอร์ไหมพรม โทนเอิร์ธ และจักรยานที่กลายเป็นส่วนหนึ่งของลุค เรียบ แต่รายละเอียดที่ข้อมือกับรองเท้าไม่เคยเรียบ.",
+          img: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80"
+        },
+        lagos: {
+          where: "Nigeria — Victoria Island",
+          name: "LAGOS",
+          notes: "เลกอสเอาลายแอนคาราและสีจัดมาชนกับสตรีทแวร์สากล เครื่องประดับใหญ่ ทรงผมเป็นงานศิลป์ และความกล้าที่ใช้สี — ฉบับนี้ยืมความกล้าตรงนั้นมาทั้งเล่ม.",
+          img: "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?auto=format&fit=crop&w=1000&q=80"
+        }
+      };
+
+      const pills = document.querySelectorAll(".pill");
+      const cards = document.querySelectorAll(".city-card");
+      const feat = document.getElementById("featureCity");
+
+      function showFeat(key) {
+        const n = notes[key];
+        if (!n) return;
+        document.getElementById("featImg").src = n.img;
+        document.getElementById("featImg").alt = "สตรีทสแนป " + n.name;
+        document.getElementById("featWhere").textContent = n.where;
+        document.getElementById("featName").textContent = n.name;
+        document.getElementById("featNotes").textContent = n.notes;
+        feat.classList.add("open");
+        cards.forEach(function (c) {
+          c.classList.toggle("is-on", c.getAttribute("data-city") === key);
+        });
+      }
+
+      pills.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          pills.forEach(function (p) { p.classList.remove("active"); });
+          btn.classList.add("active");
+          const f = btn.getAttribute("data-filter");
+          cards.forEach(function (c) {
+            const match = f === "all" || c.getAttribute("data-city") === f;
+            c.classList.toggle("hidden", !match);
+          });
+          if (f === "all") {
+            feat.classList.remove("open");
+            cards.forEach(function (c) { c.classList.remove("is-on"); });
+          } else {
+            showFeat(f);
+          }
+        });
+      });
+
+      cards.forEach(function (c) {
+        c.addEventListener("click", function () {
+          const key = c.getAttribute("data-city");
+          pills.forEach(function (p) {
+            p.classList.toggle("active", p.getAttribute("data-filter") === key);
+          });
+          showFeat(key);
+          feat.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        });
+      });
+
+      document.getElementById("closeFeat").addEventListener("click", function () {
+        feat.classList.remove("open");
+        cards.forEach(function (c) { c.classList.remove("is-on"); });
+        pills.forEach(function (p) {
+          p.classList.toggle("active", p.getAttribute("data-filter") === "all");
+        });
+      });
+
+      const toggle = document.getElementById("navToggle");
+      const links = document.getElementById("navLinks");
+      toggle.addEventListener("click", function () {
+        links.classList.toggle("open");
+      });
+      links.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () { links.classList.remove("open"); });
+      });
+
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      document.querySelectorAll(".mini-cover").forEach(function (el) {
+        el.addEventListener("click", function () {
+          const img = el.querySelector("img");
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lb.classList.add("open");
+        });
+      });
+      lb.addEventListener("click", function () { lb.classList.remove("open"); });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") lb.classList.remove("open");
+      });
+    })();
+  </script>
+</body>
+</html>
