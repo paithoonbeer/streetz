@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>STREETZ #061 — นิตยสารสตรีทแฟชั่นทั่วโลก</title>
-  <meta name="description" content="STREETZ นิตยสารสตรีทแฟชั่นจากทุกประเทศ — Street Snap, Girl of the Month, Trend Check, ฟีลนิตยสารยุค 2000" />
+  <title>STREETZ #001 — Bangkok Street นิตยสารสตรีทแฟชั่นกรุงเทพ</title>
+  <meta name="description" content="STREETZ #001 Bangkok Street — สยาม สกายวอล์ก จตุจักร JJ Vintage Hunt, ฟีลนิตยสารยุค 2000" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bagel+Fat+One&family=Kanit:wght@400;500;600;700;800;900&family=Lilita+One&family=Permanent+Marker&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Rock+Salt&display=swap" rel="stylesheet" />
@@ -498,7 +498,7 @@
 
     .city-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.35rem 1.1rem;
     }
     .city-card {
@@ -836,6 +836,153 @@
       box-shadow: 0 20px 60px #000;
     }
 
+
+    .city-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* ===== AI CREDIT ===== */
+    .ai-credit {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #555;
+      margin: 0.7rem auto 0;
+      max-width: 980px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ===== JJ VINTAGE HUNT ===== */
+    .hunt {
+      background: #1a1020;
+      color: #fff;
+    }
+    .hunt .sec-title { color: var(--lime); }
+    .hunt-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 1.4rem;
+      margin-top: 0.6rem;
+      align-items: start;
+    }
+    .hunt-hero {
+      position: relative;
+      background: #fff;
+      color: #111;
+      padding: 0.65rem;
+      border: 3px solid #111;
+      box-shadow: 10px 10px 0 var(--lime);
+      transform: rotate(-1deg);
+    }
+    .hunt-hero img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border: 2px solid #111;
+    }
+    .hunt-cap {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0.15rem 0.1rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .hunt-tips { display: grid; gap: 0.75rem; }
+    .tip {
+      background: var(--paper-2);
+      color: #111;
+      border: 3px solid #fff;
+      padding: 0.85rem 1rem 0.95rem;
+      position: relative;
+    }
+    .tip.yel { background: var(--yellow); }
+    .tip.lime { background: var(--lime); }
+    .tip.pnk { background: var(--pink); color: #fff; }
+    .tip.cyan { background: var(--cyan); }
+    .tip h3 {
+      font-family: "Anton", sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .tip .tag {
+      font-family: "Permanent Marker", cursive;
+      color: var(--pink);
+      font-size: 0.85rem;
+    }
+    .tip.pnk .tag { color: var(--yellow); }
+    .tip ul { margin: 0.25rem 0 0 1.15rem; font-size: 0.88rem; }
+    .tip li { margin: 0.15rem 0; }
+    .price-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.45rem;
+    }
+    .baht {
+      background: #111;
+      color: var(--yellow);
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.18rem 0.45rem;
+    }
+
+    /* ===== NEXT ISSUE ===== */
+    .next {
+      background: var(--yellow);
+      background-image: repeating-linear-gradient(-12deg, transparent, transparent 18px, rgba(255,255,255,.18) 18px, rgba(255,255,255,.18) 20px);
+    }
+    .next-box {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 1.4rem;
+      align-items: center;
+      background: #fff;
+      border: 3px solid #111;
+      padding: 1rem;
+      box-shadow: 8px 8px 0 #111;
+      transform: rotate(-0.8deg);
+      position: relative;
+    }
+    .next-mini {
+      position: relative;
+      background: #111;
+      border: 5px solid #fff;
+      box-shadow: 6px 8px 0 #111;
+      transform: rotate(-4deg);
+      overflow: hidden;
+    }
+    .next-mini img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: 50% 20%;
+    }
+    .next-mini .mini-top { font-size: 1.35rem; }
+    .next-box h3 {
+      font-family: "Anton", sans-serif;
+      font-size: clamp(1.8rem, 4.4vw, 3.1rem);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+    }
+    .next-box .tag {
+      font-family: "Permanent Marker", cursive;
+      color: var(--pink);
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+    }
+    .next-box p { margin-top: 0.45rem; font-size: 0.95rem; }
+
+    /* first-issue collage is shorter */
+    .collage.first-issue { min-height: 420px; }
+    .mini-cover.soon .mini-no { background: #111; color: var(--yellow); }
+
+    @media (max-width: 980px) {
+      .hunt-grid, .next-box { grid-template-columns: 1fr; }
+      .hunt-hero img { height: 280px; }
+      .next-mini { max-width: 220px; }
+      .collage.first-issue { min-height: 0; }
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 980px) {
       .city-grid { grid-template-columns: repeat(2, 1fr); }
@@ -881,27 +1028,233 @@
       .cover-lines-right .cline:nth-child(n+3),
       .cover-lines-left .cline:nth-child(n+4) { display: none; }
     }
+
+    /* ===== CLICKABLE + MORE TAG ===== */
+    [data-detail] { cursor: pointer; }
+    [data-detail]:focus-visible {
+      outline: 3px solid var(--pink);
+      outline-offset: 3px;
+    }
+    .more-tag {
+      display: inline-block;
+      margin-top: 0.45rem;
+      font-family: "Anton", sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: #111;
+      background: var(--yellow);
+      border: 2px solid #111;
+      padding: 0.14rem 0.45rem 0.1rem;
+      box-shadow: 2px 2px 0 #111;
+      transform: rotate(-2deg);
+      text-decoration: none;
+    }
+    .more-tag:hover, .more-tag:focus-visible {
+      background: var(--pink);
+      color: #fff;
+    }
+    .snap-main[data-detail]:hover,
+    .of-month[data-detail]:hover,
+    .hunt-hero[data-detail]:hover,
+    .trend-item[data-detail]:hover,
+    .next-box[data-detail]:hover,
+    .duo-card[data-detail]:hover {
+      transform: translateY(-4px) rotate(0deg);
+      box-shadow: 8px 8px 0 var(--pink);
+      z-index: 2;
+    }
+    .duo-card {
+      display: block;
+      position: relative;
+      cursor: pointer;
+    }
+    .duo-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border: 3px solid #111;
+      transform: rotate(var(--r, -2deg));
+    }
+    .duo-card .who-mini {
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-top: 0.3rem;
+      color: #fff;
+    }
+    .duo-card .more-tag { margin-top: 0.3rem; }
+
+    /* ===== DETAIL MODAL ===== */
+    .detail {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9100;
+      place-items: center;
+      padding: 1rem;
+    }
+    .detail.open { display: grid; }
+    .detail-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(17, 17, 17, 0.72);
+    }
+    .detail-sheet {
+      position: relative;
+      z-index: 1;
+      width: min(980px, 100%);
+      max-height: min(92vh, 880px);
+      overflow: auto;
+      background: var(--paper-2);
+      color: var(--ink);
+      border: 4px solid #111;
+      box-shadow: 10px 12px 0 #111, 16px 18px 0 var(--pink);
+      padding: 1.1rem 1.1rem 1rem;
+    }
+    .detail-tape {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      width: 90px;
+      height: 24px;
+      background: var(--tape);
+      transform: translateX(-50%) rotate(-3deg);
+    }
+    .detail-sheet {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .detail-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 44px;
+      height: 44px;
+      border: 3px solid #111;
+      background: var(--yellow);
+      display: grid;
+      place-items: center;
+      padding: 0;
+      box-shadow: 3px 3px 0 #111;
+      z-index: 3;
+    }
+    .detail-close svg { display: block; }
+    .detail-close:hover, .detail-close:focus-visible { background: var(--pink); }
+    .detail-close:hover svg line, .detail-close:focus-visible svg line { stroke: #fff; }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 1.15rem;
+      align-items: start;
+      overflow: auto;
+      flex: 1;
+      min-height: 0;
+      padding-right: 0.15rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    .detail-body { padding-right: 3rem; }
+    .of-month h3, .detail-body h2, .who-mini, .snap-cap .who { word-break: keep-all; }
+    .more-tag .arr {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 0.22em;
+      vertical-align: middle;
+    }
+    .more-tag .arr svg { display: block; }
+    .detail-photo-wrap {
+      background: #fff;
+      border: 3px solid #111;
+      padding: 0.5rem;
+      box-shadow: 5px 5px 0 #111;
+      transform: rotate(-1deg);
+    }
+    .detail-photo-wrap img {
+      width: 100%;
+      height: min(62vh, 520px);
+      object-fit: cover;
+      object-position: 50% 20%;
+      border: 2px solid #111;
+      background: #ddd;
+    }
+    .detail-kicker {
+      font-family: "Permanent Marker", cursive;
+      color: var(--pink);
+      font-size: 1rem;
+      transform: rotate(-2deg);
+      display: inline-block;
+    }
+    .detail-body h2 {
+      font-family: "Anton", "Kanit", sans-serif;
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      letter-spacing: 0.02em;
+      line-height: 0.95;
+      margin: 0.15rem 0 0.35rem;
+    }
+    .detail-meta {
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 0.7rem;
+    }
+    .detail-html h3 {
+      font-family: "Anton", sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      color: var(--pink);
+      margin: 0.75rem 0 0.25rem;
+    }
+    .detail-html p, .detail-html li { font-size: 0.92rem; }
+    .detail-html ul { margin: 0.2rem 0 0.4rem 1.15rem; }
+    .detail-html li { margin: 0.15rem 0; }
+    .detail-sheet .ai-credit { margin-top: 0.85rem; margin-bottom: 0.35rem; text-align: left; color: #666; }
+    body.detail-open { overflow: hidden; }
+
+    @media (max-width: 720px) {
+      .detail { padding: 0; align-items: stretch; }
+      .detail-sheet {
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+        padding: 0.55rem 0.7rem 0.7rem;
+        box-shadow: none;
+        border-width: 0;
+        border-top: 4px solid #111;
+      }
+      .detail-grid { grid-template-columns: 1fr; gap: 0.55rem; }
+      .detail-body { padding-right: 0; padding-top: 0; }
+      .detail-photo-wrap { transform: none; margin-top: 0.15rem; padding: 0.35rem; }
+      .detail-photo-wrap img { height: min(24vh, 190px); }
+      .detail-body h2 { font-size: clamp(1.45rem, 7vw, 1.85rem); }
+      .detail-html p, .detail-html li { font-size: 0.86rem; line-height: 1.5; }
+      .detail-html h3 { margin: 0.5rem 0 0.12rem; font-size: 0.98rem; }
+      .detail-meta { font-size: 0.86rem; margin-bottom: 0.4rem; }
+      .detail-sheet .ai-credit { margin-top: 0.6rem; margin-bottom: 0.2rem; font-size: 0.72rem; }
+      .detail-close { top: 8px; right: 8px; }
+    }
   </style>
 </head>
 <body>
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>STREETZ #061</span><span class="dot">●</span>
-      <span>STREET SNAP</span><span class="dot">●</span>
+      <span>STREETZ #001</span><span class="dot">●</span>
+      <span>BANGKOK STREET</span><span class="dot">●</span>
+      <span>SIAM SQUARE SNAP</span><span class="dot">●</span>
+      <span>JJ VINTAGE HUNT</span><span class="dot">●</span>
+      <span>FIRST ISSUE!!</span><span class="dot">●</span>
       <span>GIRL OF THE MONTH</span><span class="dot">●</span>
       <span>BOY OF THE MONTH</span><span class="dot">●</span>
-      <span>NEW FACE</span><span class="dot">●</span>
       <span>TREND CHECK</span><span class="dot">●</span>
-      <span>TOKYO / SEOUL / BANGKOK / LONDON / PARIS / NY / CPH / LAGOS</span><span class="dot">●</span>
-      <span>นิตยสารสตรีทแฟชั่นทั่วโลก</span><span class="dot">●</span>
-      <span>STREETZ #061</span><span class="dot">●</span>
-      <span>STREET SNAP</span><span class="dot">●</span>
+      <span>สยาม · MBK · สกายวอล์ก · จตุจักร · อารีย์</span><span class="dot">●</span>
+      <span>เล่มแรกของเรา</span><span class="dot">●</span>
+      <span>STREETZ #001</span><span class="dot">●</span>
+      <span>BANGKOK STREET</span><span class="dot">●</span>
+      <span>SIAM SQUARE SNAP</span><span class="dot">●</span>
+      <span>JJ VINTAGE HUNT</span><span class="dot">●</span>
+      <span>FIRST ISSUE!!</span><span class="dot">●</span>
       <span>GIRL OF THE MONTH</span><span class="dot">●</span>
       <span>BOY OF THE MONTH</span><span class="dot">●</span>
-      <span>NEW FACE</span><span class="dot">●</span>
       <span>TREND CHECK</span><span class="dot">●</span>
-      <span>TOKYO / SEOUL / BANGKOK / LONDON / PARIS / NY / CPH / LAGOS</span><span class="dot">●</span>
-      <span>นิตยสารสตรีทแฟชั่นทั่วโลก</span><span class="dot">●</span>
+      <span>สยาม · MBK · สกายวอล์ก · จตุจักร · อารีย์</span><span class="dot">●</span>
+      <span>เล่มแรกของเรา</span><span class="dot">●</span>
     </div>
   </div>
 
@@ -909,20 +1262,22 @@
     <a class="nav-brand" href="#cover">STREETZ</a>
     <button class="nav-toggle" type="button" aria-label="เมนู" id="navToggle">MENU</button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#world">World Street</a></li>
+      <li><a href="#map">แผนที่สยาม–JJ</a></li>
       <li><a href="#snap">Street Snap</a></li>
+      <li><a href="#hunt">JJ Hunt</a></li>
       <li><a href="#trends">Trend Check</a></li>
-      <li><a href="#back">Back Issues</a></li>
+      <li><a href="#next">#002 Tokyo</a></li>
     </ul>
-    <div class="nav-issue">#061</div>
+    <div class="nav-issue">#001</div>
   </header>
 
   <!-- HERO COVER -->
   <section class="hero-wrap" id="cover">
-    <article class="cover" aria-label="ปกนิตยสาร STREETZ ฉบับ 061">
-      <img class="cover-photo"
-        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
-        alt="สาวสตรีทลุคสีเหลืองสด ถ่ายแบบปกนิตยสาร" width="1200" height="1600" />
+    <article class="cover" aria-label="ปกนิตยสาร STREETZ ฉบับ 001 Bangkok Street">
+      <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="cover-photo" id="img-cover"
+        src="images/cover.jpg"
+        data-fallback="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+        alt="ปก STREETZ #001 — สตรีทลุคสีเหลืองสด ธีม Bangkok Street" width="1200" height="1600" />
       <div class="cover-vignette"></div>
 
       <div class="price-tag">NOV ’26<br><em>89 ฿</em></div>
@@ -954,50 +1309,49 @@
             ><tspan rotate="-3.2 2.4 -2.1 3.2 -2.6 3.8 -3.8">STREETZ</tspan></text>
           </svg>
         </h1>
-        <p class="logo-sub">นิตยสารสตรีทแฟชั่นทั่วโลก</p>
+        <p class="logo-sub">BANGKOK STREET · เล่มแรก</p>
       </div>
 
       <div class="issue-burst" aria-hidden="true">
-        <div><strong>#061</strong><small>ISSUE</small></div>
+        <div><strong>#001</strong><small>ISSUE</small></div>
       </div>
 
       <div class="cover-lines-left">
         <div class="cline yel rot1">
-          <span class="en">STREET SNAP</span>
-          <span class="th">สตรีทสแนปทั่วโลก</span>
+          <span class="en">SIAM SQUARE SNAP</span>
+          <span class="th">แอบส่องบันไดสยาม</span>
         </div>
         <div class="cline blk rot3">
           <span class="en">GIRL OF THE MONTH</span>
           <span class="th">สาวสยามลุคนี้ปังมาก</span>
         </div>
         <div class="cline pnk rot2 sm">
-          <span class="en">HARAJUKU SPECIAL</span>
-          <span class="th">ไปโยโกะกับเราไหม?</span>
+          <span class="en">FIRST ISSUE!!</span>
+          <span class="th">เล่มแรกเลย</span>
         </div>
         <div class="cline wht rot1 sm">
-          <span class="th">ทรงผมยุคนี้ต้องเซอร์</span>
+          <span class="th">แต่งไปสยามยังไงให้ปัง</span>
         </div>
       </div>
 
       <div class="cover-lines-right">
         <div class="cline lime rot4">
-          <span class="en">NEW FACE</span>
-          <span class="th">เปิดตัวน้องใหม่</span>
+          <span class="en">JJ VINTAGE HUNT</span>
+          <span class="th">ล่าของมือสองที่จตุจักร</span>
         </div>
         <div class="cline blk rot2">
           <span class="en">BOY OF THE MONTH</span>
-          <span class="th">พี่คนนี้ที่ชิค</span>
+          <span class="th">หนุ่มจตุจักร</span>
         </div>
         <div class="cline yel rot3 sm">
           <span class="en">TREND CHECK</span>
           <span class="th">ของมันต้องมีในตู้</span>
         </div>
         <div class="cline pnk rot1 sm">
-          <span class="th">รองเท้าคู่ไหนปัง?</span>
+          <span class="th">สกายวอล์กก็เป็นรันเวย์</span>
         </div>
       </div>
 
-      <!-- marker scribbles -->
       <svg class="scribble-svg" viewBox="0 0 200 130" style="width:38%; left:28%; top:36%;" aria-hidden="true">
         <ellipse cx="100" cy="65" rx="84" ry="50" fill="none" stroke="#ff1a80" stroke-width="4.5" stroke-linecap="round" transform="rotate(-11 100 65)" opacity="0.92"/>
         <ellipse cx="103" cy="67" rx="78" ry="44" fill="none" stroke="#ff1a80" stroke-width="2.2" transform="rotate(-8 100 65)" opacity="0.55"/>
@@ -1011,136 +1365,169 @@
       </svg>
 
       <div class="scribble scr-cute">so cute!!!</div>
-      <div class="scribble scr-wow">WOW!!</div>
-      <div class="scribble scr-must">ต้องมี!!</div>
+      <div class="scribble scr-wow">ปัง!!</div>
+      <div class="scribble scr-must">ต้องไป JJ!!</div>
 
-      <div class="star-sticker" aria-hidden="true">HOT!!</div>
-      <div class="badge-newface"><span>THIS MONTH</span><strong>NEW<br>FACE</strong></div>
+      <div class="star-sticker" aria-hidden="true">เล่มแรก</div>
+      <div class="badge-newface"><span>NOV ’26</span><strong>FIRST<br>ISSUE</strong></div>
 
       <div class="cover-bottom-bar">
-        <span>World Street — Tokyo · Seoul · Bangkok · London</span>
-        <span>streetzine.world</span>
+        <span>Siam Sq · MBK · Skywalk · Chatuchak</span>
+        <span>Bangkok Street</span>
       </div>
     </article>
+    <p class="ai-credit">ภาพประกอบทั้งหมดสร้างด้วย AI / All photos are AI-generated</p>
   </section>
 
-  <!-- WORLD STREET / COUNTRY PICKER -->
-  <section class="section world" id="world">
+  <!-- BANGKOK STREET MAP -->
+  <section class="section world" id="map">
     <div class="wrap">
-      <div class="sec-kicker">เลือกเมือง แล้วไปเดินสตรีทด้วยกัน</div>
-      <h2 class="sec-title">WORLD STREET <span class="th">สตรีทแฟชั่นจากทุกประเทศ</span></h2>
+      <div class="sec-kicker">เก็บจุดถ่ายแล้วไปเดินให้ครบ</div>
+      <h2 class="sec-title">BANGKOK STREET MAP <span class="th">แผนที่สตรีทกรุงเทพ — สยามถึงจตุจักร</span></h2>
       <svg class="underline-scribble" viewBox="0 0 180 14" aria-hidden="true">
         <path d="M2 9 Q 40 2, 80 8 T 178 6" fill="none" stroke="#ff1a80" stroke-width="4" stroke-linecap="round"/>
       </svg>
 
-      <div class="picker" role="tablist" aria-label="เลือกเมือง">
+      <div class="picker" role="tablist" aria-label="เลือกย่าน">
         <button class="pill active" type="button" data-filter="all">ทั้งหมด</button>
-        <button class="pill" type="button" data-filter="tokyo">Tokyo</button>
-        <button class="pill" type="button" data-filter="seoul">Seoul</button>
-        <button class="pill" type="button" data-filter="bangkok">Bangkok</button>
-        <button class="pill" type="button" data-filter="london">London</button>
-        <button class="pill" type="button" data-filter="paris">Paris</button>
-        <button class="pill" type="button" data-filter="newyork">New York</button>
-        <button class="pill" type="button" data-filter="copenhagen">Copenhagen</button>
-        <button class="pill" type="button" data-filter="lagos">Lagos</button>
-      </div>
-
-      <div class="feature-city" id="featureCity">
-        <img id="featImg" alt="" />
-        <div>
-          <button class="close-feat" type="button" id="closeFeat" aria-label="ปิด">×</button>
-          <div class="where" id="featWhere"></div>
-          <h3 id="featName"></h3>
-          <p id="featNotes"></p>
-        </div>
+        <button class="pill" type="button" data-filter="siam">สยาม</button>
+        <button class="pill" type="button" data-filter="jj">จตุจักร</button>
+        <button class="pill" type="button" data-filter="other">ย่านอื่น</button>
       </div>
 
       <div class="city-grid" id="cityGrid">
-        <article class="city-card" data-city="tokyo" data-region="asia">
+        <article class="city-card" id="spot-siam-square" data-spot="siam-square" data-area="siam" data-detail="spot-siam-square" tabindex="0" role="link" aria-label="ดูรายละเอียดจุดนี้">
           <div class="tape"></div>
           <span class="stamp">SNAP!</span>
-          <img class="polaroid" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="สตรีทสแนปที่ฮาราจูกุ โตเกียว" width="800" height="1000" />
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="polaroid" id="img-spot-siam-square"
+            src="images/spot-siam-square.jpg"
+            data-fallback="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"
+            alt="สตรีทสแนปซอยสยามสกแวร์" width="800" height="1000" />
           <div class="city-meta">
-            <h3>TOKYO</h3>
-            <div class="area">Harajuku / 原宿</div>
-            <p>เลเยอร์จัดเต็ม ผมสีสด ส้นเตี้ยคู่กระโปรงบอลลูน — สนับสีจัดแบบไม่กลัวผิด</p>
+            <h3>SIAM SQUARE</h3>
+            <div class="area">ซอยสยาม / บันไดเลื่อน</div>
+            <p>รันเวย์ดั้งเดิมของเมือง — ครอป ยีนส์เอวต่ำ กิ๊บเพชร แล้วเดินช้าๆ ให้กล้องจับ</p>
+            <a class="more-tag" href="#spot-siam-square">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </article>
 
-        <article class="city-card" data-city="seoul" data-region="asia">
+        <article class="city-card" id="spot-siam-center" data-spot="siam-center" data-area="siam" data-detail="spot-siam-center" tabindex="0" role="link" aria-label="ดูรายละเอียดจุดนี้">
           <div class="tape"></div>
-          <span class="stamp">HOT</span>
-          <img class="polaroid" src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์โซล" width="800" height="1000" />
+          <span class="stamp">MALL</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="polaroid" id="img-spot-siam-center"
+            src="images/spot-siam-center.jpg"
+            data-fallback="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+            alt="ลุคเดินสยามเซ็นเตอร์และสยามดิสคัฟเวอรี่" width="800" height="1000" />
           <div class="city-meta">
-            <h3>SEOUL</h3>
-            <div class="area">Hongdae / 홍대</div>
-            <p>คลีนแต่เท่ กางเกงวอร์มตัดสตรีทแบรนด์ เครื่องประดับมินิมอล ผิวโกลว์</p>
+            <h3>SIAM CENTER</h3>
+            <div class="area">Center / Discovery</div>
+            <p>แอร์เย็น แสงโถงสวย เหมาะกับลุคคลีนที่ยังมีเลเยอร์ — ถ่ายรูปแล้วเดินต่อไปพารากอนก็ได้</p>
+            <a class="more-tag" href="#spot-siam-center">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </article>
 
-        <article class="city-card" data-city="bangkok" data-region="asia">
+        <article class="city-card" id="spot-mbk" data-spot="mbk" data-area="siam" data-detail="spot-mbk" tabindex="0" role="link" aria-label="ดูรายละเอียดจุดนี้">
           <div class="tape"></div>
-          <span class="stamp">SIAM</span>
-          <img class="polaroid" src="https://images.unsplash.com/photo-1513379733131-47fc74b45fc7?auto=format&fit=crop&w=800&q=80" alt="สตรีทแฟชั่นสยาม กรุงเทพ" width="800" height="1000" />
+          <span class="stamp">MBK</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="polaroid" id="img-spot-mbk"
+            src="images/spot-mbk.jpg"
+            data-fallback="https://images.unsplash.com/photo-1513379733131-47fc74b45fc7?auto=format&fit=crop&w=800&q=80"
+            alt="สตรีทแฟชั่นแถวเอ็มบีเค" width="800" height="1000" />
           <div class="city-meta">
-            <h3>BANGKOK</h3>
-            <div class="area">สยาม / MBK</div>
-            <p>ช้อปสยามแบบเดิมๆ ที่ใหม่เสมอ — เสื้อครอป ยีนส์เอวต่ำ รองเท้าผ้าใบสก๊อย</p>
+            <h3>MBK</h3>
+            <div class="area">มาบุญครอง</div>
+            <p>ซื้อกิ๊บ เคส เสื้อถูก แล้วแต่งต่อเลยที่ห้าง — ของมันต้องมีส่วนใหญ่เริ่มจากชั้นนี้</p>
+            <a class="more-tag" href="#spot-mbk">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </article>
 
-        <article class="city-card" data-city="london" data-region="europe">
+        <article class="city-card" id="spot-skywalk" data-spot="skywalk" data-area="siam" data-detail="spot-skywalk" tabindex="0" role="link" aria-label="ดูรายละเอียดจุดนี้">
           <div class="tape"></div>
-          <span class="stamp">UK</span>
-          <img class="polaroid" src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์ลอนดอน" width="800" height="1000" />
+          <span class="stamp">BTS</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="polaroid" id="img-spot-skywalk"
+            src="images/spot-skywalk.jpg"
+            data-fallback="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=800&q=80"
+            alt="สตรีทสแนปบนสกายวอล์กบีทีเอสสยาม" width="800" height="1000" />
           <div class="city-meta">
-            <h3>LONDON</h3>
-            <div class="area">Shoreditch</div>
-            <p>มาร์เทนส์ แจ็กเก็ตหนัง ลายสก๊อต กับวินเทจตลาดพอร์โตเบลโลที่ยังชนะ</p>
+            <h3>BTS SKYWALK</h3>
+            <div class="area">สยาม–ชิดลม–สนามกีฬา</div>
+            <p>ทางเดินลอยฟ้าคือรันเวย์ฟรี แสงบ่ายสวย ระวังรองเท้าที่เดินนานแล้วเท้าไม่พัง</p>
+            <a class="more-tag" href="#spot-skywalk">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </article>
 
-        <article class="city-card" data-city="paris" data-region="europe">
+        <article class="city-card" id="spot-samyan" data-spot="samyan" data-area="siam" data-detail="spot-samyan" tabindex="0" role="link" aria-label="ดูรายละเอียดจุดนี้">
           <div class="tape"></div>
-          <span class="stamp">CHIC</span>
-          <img class="polaroid" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80" alt="แฟชั่นริมถนนปารีส" width="800" height="1000" />
+          <span class="stamp">NEW</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="polaroid" id="img-spot-samyan"
+            src="images/spot-samyan.jpg"
+            data-fallback="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80"
+            alt="สตรีทสไตล์สามย่านมิตรทาวน์" width="800" height="1000" />
           <div class="city-meta">
-            <h3>PARIS</h3>
-            <div class="area">Le Marais</div>
-            <p>เสื้อคลุมยาว กาแฟริมทาง โทนนู้ดตัดรองเท้าแดง — ดูไม่ได้ตั้งใจ แต่ปัง</p>
+            <h3>SAMYAN</h3>
+            <div class="area">สามย่านมิตรทาวน์</div>
+            <p>ลุคนิสิตตัดสตรีท โทนสะอาดแต่มีอะксеส — จุดพักก่อนวนกลับสยาม</p>
+            <a class="more-tag" href="#spot-samyan">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </article>
 
-        <article class="city-card" data-city="newyork" data-region="americas">
+        <article class="city-card" id="spot-chatuchak" data-spot="chatuchak" data-area="jj" data-detail="spot-chatuchak" tabindex="0" role="link" aria-label="ดูรายละเอียดจุดนี้">
           <div class="tape"></div>
-          <span class="stamp">NYC</span>
-          <img class="polaroid" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์นิวยอร์ก" width="800" height="1000" />
+          <span class="stamp">JJ</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="polaroid" id="img-spot-chatuchak"
+            src="images/spot-chatuchak.jpg"
+            data-fallback="https://images.unsplash.com/photo-1558171813-4c088753af8f?auto=format&fit=crop&w=800&q=80"
+            alt="ล่าวินเทจที่ตลาดนัดจตุจักร" width="800" height="1000" />
           <div class="city-meta">
-            <h3>NEW YORK</h3>
-            <div class="area">SoHo / Downtown</div>
-            <p>ฮู๊ดโอเวอร์ไซส์ หมวกแก๊ป สตรีทยอร์กแบบเดินไปทำงานแต่หน้าปกได้</p>
+            <h3>CHATUCHAK</h3>
+            <div class="area">ตลาดนัดจตุจักร / JJ</div>
+            <p>เสาร์–อาทิตย์ทั้งวัน เสื้อมือสอง ยีนส์ กระเป๋า — ไปเช้า ถ่ายก่อนแดดจัด ต่อราคาด้วยรอยยิ้ม</p>
+            <a class="more-tag" href="#spot-chatuchak">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </article>
 
-        <article class="city-card" data-city="copenhagen" data-region="europe">
+        <article class="city-card" id="spot-jj-green" data-spot="jj-green" data-area="jj" data-detail="spot-jj-green" tabindex="0" role="link" aria-label="ดูรายละเอียดจุดนี้">
+          <div class="tape"></div>
+          <span class="stamp">NIGHT</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="polaroid" id="img-spot-jj-green"
+            src="images/spot-jj-green.jpg"
+            data-fallback="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80"
+            alt="บรรยากาศวินเทจที่ JJ Green" width="800" height="1000" />
+          <div class="city-meta">
+            <h3>JJ GREEN</h3>
+            <div class="area">เจเจ กรีน ข้างจตุจักร</div>
+            <p>ชิลล์กว่าในตลาดใหญ่ เปิดเย็น ศุกร์–อาทิตย์ ของสะสมและวินเทจเดินได้สบายกว่า</p>
+            <a class="more-tag" href="#spot-jj-green">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
+          </div>
+        </article>
+
+        <article class="city-card" id="spot-ari" data-spot="ari" data-area="other" data-detail="spot-ari" tabindex="0" role="link" aria-label="ดูรายละเอียดจุดนี้">
           <div class="tape"></div>
           <span class="stamp">COOL</span>
-          <img class="polaroid" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์โคเปนเฮเกน" width="800" height="1000" />
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="polaroid" id="img-spot-ari"
+            src="images/spot-ari.jpg"
+            data-fallback="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=800&q=80"
+            alt="สตรีทสไตล์ย่านอารีย์" width="800" height="1000" />
           <div class="city-meta">
-            <h3>COPENHAGEN</h3>
-            <div class="area">Nørrebro</div>
-            <p>สคานดิสตรีท เสื้อไหมพรม โทนเอิร์ธ จักรยานคู่รองเท้า — เรียบแต่มีเลเยอร์</p>
+            <h3>ARI</h3>
+            <div class="area">อารีย์</div>
+            <p>คาเฟ่ ซอยร่ม โทนเอิร์ธกับรองเท้าหนังกลับ — สตรีทที่ไม่ต้องตะโกนแต่กล้องจับอยู่ดี</p>
+            <a class="more-tag" href="#spot-ari">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </article>
 
-        <article class="city-card" data-city="lagos" data-region="africa">
+        <article class="city-card" id="spot-talat-noi" data-spot="talat-noi" data-area="other" data-detail="spot-talat-noi" tabindex="0" role="link" aria-label="ดูรายละเอียดจุดนี้">
           <div class="tape"></div>
-          <span class="stamp">VIBE</span>
-          <img class="polaroid" src="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?auto=format&fit=crop&w=800&q=80" alt="สตรีทสไตล์เลกอส" width="800" height="1000" />
+          <span class="stamp">OLD</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" class="polaroid" id="img-spot-talat-noi"
+            src="images/spot-talat-noi.jpg"
+            data-fallback="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80"
+            alt="สตรีทสไตล์ตลาดน้อย" width="800" height="1000" />
           <div class="city-meta">
-            <h3>LAGOS</h3>
-            <div class="area">Victoria Island</div>
-            <p>สีจัดลายแอนคาราตัดสตรีทแวร์ เครื่องประดับใหญ่สะดุดตา สีสันไม่เคยเบา</p>
+            <h3>TALAT NOI</h3>
+            <div class="area">ตลาดน้อย</div>
+            <p>กำแพงสี ซอยแคบ ลุควินเทจกับพื้นหลังเมืองเก่า — ไปเช้าแสงนิ่ม คนยังไม่แน่น</p>
+            <a class="more-tag" href="#spot-talat-noi">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </article>
       </div>
@@ -1151,42 +1538,135 @@
   <section class="section snap" id="snap">
     <div class="wrap">
       <div class="sec-kicker">แอบส่องที่สยาม เมื่อวันเสาร์นั้น</div>
-      <h2 class="sec-title">STREET SNAP <span class="th">สตรีทสแนปแห่งเดือน</span></h2>
+      <h2 class="sec-title">STREET SNAP <span class="th">สตรีทสแนปแห่งเดือน — สยามสกแวร์</span></h2>
       <svg class="underline-scribble" viewBox="0 0 180 14" aria-hidden="true">
         <path d="M3 8 Q 50 1, 90 10 T 176 5" fill="none" stroke="#ffe200" stroke-width="4" stroke-linecap="round"/>
       </svg>
 
       <div class="snap-grid">
-        <div class="snap-main">
+        <div class="snap-main" id="snap-main" data-detail="snap-main" tabindex="0" role="link" aria-label="ดูรายละเอียด น้องมายด์">
           <div class="corner-tape tl"></div>
           <div class="corner-tape tr"></div>
-          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80" alt="แพร สาวแห่งเดือน ในลุคสีเหลืองนอกสยามสกแวร์" width="1000" height="1300" />
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" id="img-snap-main"
+            src="images/snap-main.jpg"
+            data-fallback="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80"
+            alt="น้องมายด์ นักศึกษา 19 ปี ที่บันไดสยามสกแวร์ ลุคสาวแห่งเดือน" width="1000" height="1300" />
           <div class="scribble" style="position:absolute;top:18%;right:10%;font-size:1.6rem;transform:rotate(12deg);color:#ff1a80;">iconic.</div>
           <div class="snap-cap">
-            <span class="who">แพร — SIAM SQ.</span>
-            <span>12 NOV 26</span>
+            <span class="who">น้องมายด์, 19 — SIAM SQ.</span>
+            <span>07 NOV 26</span>
           </div>
+          <a class="more-tag" href="#snap-main">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
         </div>
 
         <div class="snap-side">
-          <div class="of-month girl">
-            <div class="tag">Girl of the month</div>
-            <h3>สาวแห่งเดือน : แพร</h3>
-            <p>เจอแพรที่บันไดสยาม ใส่เสื้อเหลืองฉูดกับยีนส์เอวต่ำ คาดเข็มขัดเงิน — ฟีลนิตยสารยุค 2000 แบบไม่ตั้งใจ บอกว่าเช้านี้เพิ่งซื้อกิ๊บเพชรมาจากเอ็มบีเค</p>
-            <p class="note-hand">ต้องมีกิ๊บอันนี้!!</p>
+          <div class="of-month girl" id="snap-mind-card" data-detail="snap-main" tabindex="0" role="link" aria-label="ดูรายละเอียด น้องมายด์">
+            <div class="tag">Girl of the month · สาวสยาม</div>
+            <h3>สาวแห่งเดือน : น้องมายด์, 19, นักศึกษา</h3>
+            <p>เจอที่บันไดทางเชื่อมสยามช่วงเย็น เสื้อครอปชมพู คู่กระโปรงยีนส์ปลายรุ่ย กิ๊บสีพาสเทลหลายอันกับรองเท้าผ้าใบชมพู–ขาว — ลุคที่บอกว่าเพิ่งเดินจากเอ็มบีเคมาโดยไม่ต้องพูด</p>
+            <p class="note-hand">กิ๊บนี้ต้องมี!!</p>
+            <a class="more-tag" href="#snap-main">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
 
-          <div class="of-month boy">
-            <div class="tag">Boy of the month</div>
-            <h3>หนุ่มแห่งเดือน : ภีม</h3>
-            <p>ภีมจากทองหล่อ ลุคเบจ-น้ำตาลเรียบแต่ตัดทรงเป๊ะ แจ็กเก็ตบางกับรองเท้าหนังกลับ — สตรีทแบบผู้ใหญ่ยังชิคอยู่</p>
+          <div class="of-month boy" id="snap-phu-card" data-detail="snap-phu" tabindex="0" role="link" aria-label="ดูรายละเอียด น้องภู">
+            <div class="tag">Boy of the month · หนุ่มจตุจักร</div>
+            <h3>หนุ่มแห่งเดือน : น้องภู, 23</h3>
+            <p style="font-weight:800;margin:0.1rem 0 0.35rem;">ร้านวินเทจออนไลน์</p>
+            <p>ลุคจากวันเสาร์ที่จตุจักร บีนนี่เทา เชิ้ตยีนส์เปิดทับทีเชิ้ตลายดอกไม้ที่เพิ่งเล็งมาในซอยมือสอง — ไม่ได้แต่งเพื่อถ่าย แต่กล้องจับแล้วกลายเป็นสแนป</p>
+            <a class="more-tag" href="#snap-phu">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
 
           <div class="duo">
-            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=700&q=80" alt="พอร์เทรตสาวสตรีท โทนอ่อน" style="--r:-3deg" width="700" height="900" />
-            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=700&q=80" alt="พอร์เทรตหนุ่มสตรีทลุคเบจ" style="--r:2.5deg" width="700" height="900" />
+            <div class="duo-card" data-detail="snap-fah" tabindex="0" role="link" aria-label="ดูรายละเอียด น้องฟ้า">
+              <img onerror="this.onerror=null;this.src=this.dataset.fallback" id="img-snap-a"
+                src="images/snap-a.jpg"
+                data-fallback="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=700&q=80"
+                alt="พอร์เทรต น้องฟ้า, 21, บาริสต้า" style="--r:-3deg" width="700" height="900" />
+              <div class="who-mini">น้องฟ้า, 21, บาริสต้า</div>
+              <a class="more-tag" href="#snap-fah">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
+            </div>
+            <div class="duo-card" data-detail="snap-phu" tabindex="0" role="link" aria-label="ดูรายละเอียด น้องภู">
+              <img onerror="this.onerror=null;this.src=this.dataset.fallback" id="img-snap-b"
+                src="images/snap-b.jpg"
+                data-fallback="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=700&q=80"
+                alt="พอร์เทรต น้องภู, 23, ร้านวินเทจออนไลน์" style="--r:2.5deg" width="700" height="900" />
+              <div class="who-mini">น้องภู, 23, ร้านวินเทจออนไลน์</div>
+              <a class="more-tag" href="#snap-phu">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
+            </div>
           </div>
-          <p class="note-hand" style="color:#ffe200;">New Face เดือนนี้มี 2 คนเลย!</p>
+          <p class="note-hand" style="color:#ffe200;">New Face เดือนนี้ — น้องฟ้า และหนุ่มแห่งเดือน น้องภู</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JJ VINTAGE HUNT -->
+  <section class="section hunt" id="hunt">
+    <div class="wrap">
+      <div class="sec-kicker">เสาร์เช้า ไปก่อนคนแน่น</div>
+      <h2 class="sec-title">JJ VINTAGE HUNT <span class="th">คู่มือล่าของมือสองที่จตุจักร</span></h2>
+      <svg class="underline-scribble" viewBox="0 0 180 14" aria-hidden="true">
+        <path d="M2 10 Q 45 2, 88 9 T 178 4" fill="none" stroke="#c6ff3d" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+
+      <div class="hunt-grid">
+        <div class="hunt-hero" id="hunt-guide" data-detail="hunt-guide" tabindex="0" role="link" aria-label="ดูคู่มือ JJ Vintage Hunt">
+          <div class="corner-tape tl"></div>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" id="img-hunt-hero"
+            src="images/hunt-hero.jpg"
+            data-fallback="https://images.unsplash.com/photo-1558171813-4c088753af8f?auto=format&fit=crop&w=1200&q=80"
+            alt="บรรยากาศเดินล่าวินเทจในตลาดนัดจตุจักร" width="1200" height="800" />
+          <div class="hunt-cap">
+            <span>CHATUCHAK · JJ</span>
+            <span>SAT–SUN</span>
+          </div>
+          <a class="more-tag" href="#hunt-guide">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
+        </div>
+
+        <div class="hunt-tips">
+          <div class="tip yel">
+            <div class="tag">Best sections</div>
+            <h3>เดินโซนไหนก่อน</h3>
+            <ul>
+              <li>เสื้อผ้าวัยรุ่นและของใหม่ราคาเบา — แถว Section 2–4</li>
+              <li>มือสองและวินเทจที่ทีมเราเล็งบ่อย — Section 5–8 และ 24–27</li>
+              <li>Section 27 โดยเฉพาะ มักเป็นจุดรวมเสื้อมือสอง</li>
+              <li>เครื่องประดับ หมวก กระเป๋าใบเล็ก — วน Section 8–10</li>
+              <li>ของสะสมชิลล์กว่าในตลาดใหญ่ ไปต่อที่ JJ Green ช่วงเย็น</li>
+            </ul>
+          </div>
+          <div class="tip lime">
+            <div class="tag">Prices in baht</div>
+            <h3>ราคาที่เจอบ่อย</h3>
+            <p>ไม่ใช่เรตราชการ — เป็นช่วงที่เดินแล้วเจอซ้ำๆ ถ้าถูกกว่านี้ยิ่งดี ถ้าแพงกว่าให้ดูสภาพและลาย</p>
+            <div class="price-row">
+              <span class="baht">ทีเชิ้ตมือสอง 100–350฿</span>
+              <span class="baht">วินเทจลายหายาก 350–1,200฿</span>
+              <span class="baht">ยีนส์ 250–800฿</span>
+              <span class="baht">กระเป๋า 150–700฿</span>
+              <span class="baht">แจ็กเก็ต 400–1,500฿</span>
+            </div>
+          </div>
+          <div class="tip cyan">
+            <div class="tag">Haggling</div>
+            <h3>ต่อราคายังไงไม่เสียมารยาท</h3>
+            <ul>
+              <li>ยิ้มก่อน ถามราคา ถ้าจะซื้อหลายชิ้นขอเป็นชุด</li>
+              <li>เริ่มต่ำกว่าที่เรียกประมาณ 20–30% อย่ากดจนร้านไม่คุ้ม</li>
+              <li>เงินสดยังคุยง่าย ของชิ้นเล็กหรือราคาถูกอยู่แล้วไม่ต้องต่อหนัก</li>
+              <li>ไม่ไหวก็ยิ้มแล้วเดินต่อ เดี๋ยวร้านทักกลับมาเองก็มี</li>
+            </ul>
+          </div>
+          <div class="tip pnk">
+            <div class="tag">Best time</div>
+            <h3>ไปวันไหน กี่โมง</h3>
+            <ul>
+              <li>เช้าวันเสาร์ 09:00–11:00 ก่อนแดดจัดและซอยเริ่มตัน</li>
+              <li>อาทิตย์บ่ายคนแน่นสุด ถ่ายรูปยาก ต่อราคาก็รีบ</li>
+              <li>หลัง 16:00 อากาศดีขึ้นบ้าง แต่ของดีอาจถูกเลือกไปแล้ว</li>
+              <li>JJ Green เหมาะกับเย็นวันศุกร์–อาทิตย์ เดินชิลล์กว่าในจตุจักร</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -1195,133 +1675,139 @@
   <!-- TREND CHECK -->
   <section class="section trends" id="trends">
     <div class="wrap">
-      <div class="sec-kicker">เช็กเลย ของมันต้องมี</div>
-      <h2 class="sec-title">TREND CHECK <span class="th">เทรนด์ที่ต้องมีในตู้เดือนนี้</span></h2>
+      <div class="sec-kicker">เช็กเลย ของมันต้องมี — ฉบับกรุงเทพ</div>
+      <h2 class="sec-title">TREND CHECK <span class="th">เทรนด์สตรีทสยาม–จตุจักรเดือนนี้</span></h2>
       <svg class="underline-scribble" viewBox="0 0 180 14" aria-hidden="true">
         <path d="M2 10 Q 45 2, 88 9 T 178 4" fill="none" stroke="#ff1a80" stroke-width="4" stroke-linecap="round"/>
       </svg>
 
       <ol class="trend-list">
-        <li class="trend-item">
+        <li class="trend-item" id="trend-01" data-detail="trend-01" tabindex="0" role="link">
           <div class="num">01</div>
           <div>
-            <h3>ยีนส์เอวต่ำกลับมาแล้ว <em>LOW-RISE IS BACK</em></h3>
-            <p>อย่าเพิ่งเผากางเกงตัวเก่า — เอวต่ำยุค 2000 กลับมาคู่เสื้อครอปสั้นที่สุดในตู้</p>
+            <h3>ยีนส์เอวต่ำที่บันไดสยาม <em>LOW-RISE AT SIAM</em></h3>
+            <p>คู่เสื้อครอปสั้น เดินซอยสยามแล้วยังชนะ — ของเก่าในตู้ดึงกลับมาใส่ได้เลย</p>
+            <a class="more-tag" href="#trend-01">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </li>
-        <li class="trend-item">
+        <li class="trend-item" id="trend-02" data-detail="trend-02" tabindex="0" role="link">
           <div class="num">02</div>
           <div>
-            <h3>กิ๊บเพชรวับวับ <em>RHINESTONE CLIPS</em></h3>
-            <p>ติดข้างละ 3 อัน ยิ่งเยอะยิ่งชนะ ไฮไลต์ของสาวสยามสัปดาห์นี้</p>
+            <h3>กิ๊บเพชรจากเอ็มบีเค <em>RHINESTONE CLIPS</em></h3>
+            <p>ติดข้างละหลายอัน ยิ่งวับยิ่งปัง เป็นไฮไลต์ที่กล้องจับได้แม้เดินสกายวอล์กเร็ว</p>
+            <a class="more-tag" href="#trend-02">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </li>
-        <li class="trend-item">
+        <li class="trend-item" id="trend-03" data-detail="trend-03" tabindex="0" role="link">
           <div class="num">03</div>
           <div>
-            <h3>กระเป๋ามินิจนเกือบไม่มีช่อง <em>MICRO BAG</em></h3>
-            <p>ใส่ได้แค่ลิปกับมือถือ — แต่เดินผ่านแล้วต้องหัน</p>
+            <h3>เสื้อวินเทจจากจตุจักร <em>JJ VINTAGE TEE</em></h3>
+            <p>ลายเก่า สีซีดพอดี ใส่ทับเลเยอร์หรือใส่เดี่ยวกับยีนส์ — ของที่ได้มามีเรื่องเล่า</p>
+            <a class="more-tag" href="#trend-03">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </li>
-        <li class="trend-item">
+        <li class="trend-item" id="trend-04" data-detail="trend-04" tabindex="0" role="link">
           <div class="num">04</div>
           <div>
-            <h3>รองเท้าแมตช์ทั้งลุค <em>TONE-ON-TONE KICKS</em></h3>
-            <p>ผ้าใบโทนเดียวกับเสื้อ หรือสวนสีจัดๆ ก็ได้ ขอแค่ตั้งใจ</p>
+            <h3>กระเป๋ามินิใบจิ๋ว <em>MICRO BAG</em></h3>
+            <p>ใส่ได้แค่ลิปกับมือถือ แต่เดินผ่านสยามเซ็นเตอร์แล้วต้องหัน</p>
+            <a class="more-tag" href="#trend-04">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </li>
-        <li class="trend-item">
+        <li class="trend-item" id="trend-05" data-detail="trend-05" tabindex="0" role="link">
           <div class="num">05</div>
           <div>
             <h3>เสื้อตาข่ายเลเยอร์ <em>MESH ON TOP</em></h3>
-            <p>ใส่ทับเสื้อสายเดี่ยว หรือโชว์ผิวบางๆ แบบนิตยสารเก่าที่ยังเท่</p>
+            <p>ใส่ทับสายเดี่ยว ตัดกับแอร์ห้างและแดดสกายวอล์ก — โปร่งแต่ยังมีชั้น</p>
+            <a class="more-tag" href="#trend-05">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </li>
-        <li class="trend-item">
+        <li class="trend-item" id="trend-06" data-detail="trend-06" tabindex="0" role="link">
           <div class="num">06</div>
           <div>
-            <h3>เข็มกลัดสะสมปักท่วม <em>PIN COLLECTING</em></h3>
-            <p>แขนกระเป๋า หน้าหมวก อกแจ็กเก็ต — ยิ่งสุ่มยิ่งเป็นตัวเอง</p>
+            <h3>รองเท้าที่เดินตลาดได้ทั้งวัน <em>WALKABLE KICKS</em></h3>
+            <p>ผ้าใบโทนแมตช์ชุด สวยแต่ต้องลุยจตุจักรได้ ไม่ใช่แค่ถ่ายแล้วเปลี่ยน</p>
+            <a class="more-tag" href="#trend-06">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </li>
-        <li class="trend-item">
+        <li class="trend-item" id="trend-07" data-detail="trend-07" tabindex="0" role="link">
           <div class="num">07</div>
           <div>
-            <h3>แขนยาวโผล่ใต้เสื้อยืด <em>DOUBLE SLEEVE</em></h3>
-            <p>เลเยอร์แบบไม่ร้อนเกิน ตัดลายทางกับสีพื้น ได้อารมณ์ฮาราจูกุเบาๆ</p>
+            <h3>เครื่องเงินซ้อนหลายชั้น <em>SILVER STACK</em></h3>
+            <p>สร้อย แหวน กำไลซ้อนกัน วับใต้แสงโถงดิสคัฟเวอรี่ โดยไม่ต้องมีโลโก้ใหญ่</p>
+            <a class="more-tag" href="#trend-07">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </li>
-        <li class="trend-item">
+        <li class="trend-item" id="trend-08" data-detail="trend-08" tabindex="0" role="link">
           <div class="num">08</div>
           <div>
-            <h3>โทนเหลืองตัดชมพูนีออน <em>Y2K COLOR CLASH</em></h3>
-            <p>สีปก STREETZ เดือนนี้ คือสีที่ควรมีบนตัวด้วย — กล้าแล้วปัง</p>
+            <h3>เหลืองตัดชมพูนีออน <em>Y2K COLOR CLASH</em></h3>
+            <p>สีปก STREETZ เล่มแรก คือสีที่ควรมีบนตัวด้วย — กล้าแล้วปังที่สยาม</p>
+            <a class="more-tag" href="#trend-08">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
           </div>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- BACK ISSUES -->
-  <section class="section back" id="back">
+  <!-- NEXT ISSUE -->
+  <section class="section next" id="next">
     <div class="wrap">
-      <div class="sec-kicker">เก็บทุกฉบับ วางซ้อนบนโต๊ะ</div>
-      <h2 class="sec-title">BACK ISSUES <span class="th">ปกเก่าที่ยังชิค — คลิกดูใกล้ๆ</span></h2>
+      <div class="sec-kicker">พลิกไปฉบับหน้า</div>
+      <h2 class="sec-title">COMING NEXT <span class="th">ฉบับหน้าอย่าพลาด</span></h2>
+      <div class="next-box" id="next-tokyo" data-detail="next-tokyo" tabindex="0" role="link" aria-label="ดูรายละเอียดฉบับหน้า Tokyo Harajuku">
+        <div class="next-mini">
+          <div class="mini-tape"></div>
+          <div class="mini-top">STREETZ</div>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" id="img-next-tokyo"
+            src="images/next-tokyo.jpg"
+            data-fallback="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80"
+            alt="ปกตัวอย่าง STREETZ ฉบับ 002 โตเกียว ฮาราจูกุ" width="800" height="1066" />
+          <span class="mini-no">#002</span>
+        </div>
+        <div>
+          <div class="tag">Coming next issue</div>
+          <h3>TOKYO HARAJUKU<br>#002</h3>
+          <p>เล่มหน้าไปเดินทาเคชิตะและฮาราจูกุ — เลเยอร์จัด ผมสีสด สนับกับกระโปรงบอลลูน แล้วเก็บสแนปมาทั้งฉบับ ให้คิวไว้เลยว่า #002 คือโตเกียว</p>
+          <a class="more-tag" href="#next-tokyo">ดูเพิ่ม <span class="arr" aria-hidden="true"><svg width="12" height="10" viewBox="0 0 12 10" focusable="false"><path d="M1 5h7.2M5.2 1.4 10 5 5.2 8.6" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="collage">
-        <article class="mini-cover c1" style="--r:-8deg">
+  <!-- FIRST ISSUE -->
+  <section class="section back" id="first">
+    <div class="wrap">
+      <div class="sec-kicker">ยังไม่มีฉบับเก่า — เราเพิ่งเริ่ม</div>
+      <h2 class="sec-title">ISSUE #001 <span class="th">นี่คือเล่มแรกของเรา — ฉบับหน้ามีอีก</span></h2>
+
+      <div class="collage first-issue">
+        <article class="mini-cover c2" style="--r:-6deg; left:12%; top:40px;">
           <div class="mini-tape"></div>
           <div class="mini-top">STREETZ</div>
-          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 060" width="600" height="800" />
-          <span class="mini-no">#060</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" id="img-first-cover"
+            src="images/cover.jpg"
+            data-fallback="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80"
+            alt="ปก STREETZ ฉบับ 001 Bangkok Street" width="600" height="800" />
+          <span class="mini-no">#001</span>
         </article>
-        <article class="mini-cover c2">
+        <article class="mini-cover c4 soon" style="--r:7deg; left:40%; top:80px;">
           <div class="mini-tape"></div>
           <div class="mini-top">STREETZ</div>
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 059" width="600" height="800" />
-          <span class="mini-no">#059</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" id="img-first-tokyo"
+            src="images/next-tokyo.jpg"
+            data-fallback="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80"
+            alt="ตัวอย่างปกฉบับ 002 โตเกียว" width="600" height="800" />
+          <span class="mini-no">#002</span>
         </article>
-        <article class="mini-cover c3">
+        <article class="mini-cover c8 soon" style="--r:-4deg; left:66%; top:50px;">
           <div class="mini-tape"></div>
           <div class="mini-top">STREETZ</div>
-          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 058" width="600" height="800" />
-          <span class="mini-no">#058</span>
-        </article>
-        <article class="mini-cover c4">
-          <div class="mini-tape"></div>
-          <div class="mini-top">STREETZ</div>
-          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 057" width="600" height="800" />
-          <span class="mini-no">#057</span>
-        </article>
-        <article class="mini-cover c5">
-          <div class="mini-tape"></div>
-          <div class="mini-top">STREETZ</div>
-          <img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 056" width="600" height="800" />
-          <span class="mini-no">#056</span>
-        </article>
-        <article class="mini-cover c6">
-          <div class="mini-tape"></div>
-          <div class="mini-top">STREETZ</div>
-          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 055" width="600" height="800" />
-          <span class="mini-no">#055</span>
-        </article>
-        <article class="mini-cover c7">
-          <div class="mini-tape"></div>
-          <div class="mini-top">STREETZ</div>
-          <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 054" width="600" height="800" />
-          <span class="mini-no">#054</span>
-        </article>
-        <article class="mini-cover c8">
-          <div class="mini-tape"></div>
-          <div class="mini-top">STREETZ</div>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 053" width="600" height="800" />
-          <span class="mini-no">#053</span>
-        </article>
-        <article class="mini-cover c9">
-          <div class="mini-tape"></div>
-          <div class="mini-top">STREETZ</div>
-          <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=600&q=80" alt="ปก STREETZ ฉบับ 052" width="600" height="800" />
-          <span class="mini-no">#052</span>
+          <img onerror="this.onerror=null;this.src=this.dataset.fallback" id="img-coming-soon"
+            src="images/coming-soon.jpg"
+            data-fallback="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=600&q=80"
+            alt="ปกตัวอย่างฉบับต่อๆ ไป ของ STREETZ" width="600" height="800" />
+          <span class="mini-no">SOON</span>
         </article>
       </div>
     </div>
@@ -1329,125 +1815,344 @@
 
   <footer>
     <div class="foot-logo">STREETZ</div>
-    <p>นิตยสารสตรีทแฟชั่นทั่วโลก — ฉบับทดลอง <span style="white-space:nowrap">#061 · NOV 2026</span></p>
-    <p>Street Snap · Girl / Boy of the Month · New Face · Trend Check</p>
-    <small>ต้นแบบเว็บสไตล์นิตยสารสตรีทยุค 2000 — ภาพจาก Unsplash (ไม่ใช้ปกนิตยสารจริง) · STREETZ เป็นชื่อต้นแบบอิสระ</small>
+    <p>นิตยสารสตรีทแฟชั่นกรุงเทพ — ฉบับแรก #001 Bangkok Street · NOV 2026</p>
+    <p>Siam Square · MBK · Skywalk · Chatuchak · JJ Vintage Hunt</p>
+    <p class="ai-credit" style="color:#bbb; margin-top:0.85rem;">ภาพประกอบทั้งหมดสร้างด้วย AI / All photos are AI-generated</p>
+    <small>ต้นแบบเว็บสไตล์นิตยสารสตรีทยุค 2000 · STREETZ เป็นชื่อต้นแบบอิสระ · ตัวแบบในหน้านี้เรียกแบบไม่ระบุชื่อ</small>
   </footer>
 
-  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="ดูรูปขยาย">
-    <img id="lbImg" alt="" />
+  <div class="detail" id="detail" hidden role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+    <div class="detail-backdrop" data-close="1"></div>
+    <div class="detail-sheet" role="document">
+      <button class="detail-close" type="button" id="detailClose" aria-label="ปิดรายละเอียด"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19" stroke="#111" stroke-width="3" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg></button>
+      <div class="detail-tape" aria-hidden="true"></div>
+      <div class="detail-grid">
+        <div class="detail-photo-wrap">
+          <img id="detailImg" alt="" />
+        </div>
+        <div class="detail-body">
+          <p class="detail-kicker" id="detailKicker"></p>
+          <h2 id="detailTitle"></h2>
+          <p class="detail-meta" id="detailMeta"></p>
+          <div class="detail-html" id="detailHtml"></div>
+          <p class="ai-credit">ภาพประกอบทั้งหมดสร้างด้วย AI / All photos are AI-generated</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
     (function () {
-      const notes = {
-        tokyo: {
-          where: "Japan — Harajuku",
-          name: "TOKYO",
-          notes: "ฮาราจูกุยังเป็นมหาสมุทรของสไตล์ — เลเยอร์ ลายเส้น ผมสี และรองเท้าที่ไม่มีสูตรสำเร็จ เดินTakeshita วันเดียวเก็บสแนปได้ทั้งฉบับ เดือนนี้ทีมเราโฟกัสลุคบอลลูนสเกิร์ตคู่สนับสีจัด.",
-          img: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=80"
+      document.querySelectorAll("img[data-fallback]").forEach(function (img) {
+        img.addEventListener("error", function onErr() {
+          img.removeEventListener("error", onErr);
+          var fb = img.getAttribute("data-fallback");
+          if (fb) img.src = fb;
+        });
+      });
+
+      var DETAILS = {
+        "spot-siam-square": {
+          kicker: "Bangkok Street Map",
+          title: "SIAM SQUARE",
+          meta: "ซอยสยาม / บันไดเลื่อน · BTS สยาม",
+          img: "images/spot-siam-square.jpg",
+          alt: "สตรีทสแนปซอยสยามสกแวร์",
+          html: "<h3>ดูอะไร</h3><p>ซอยสยาม 1–3 และบันไดเลื่อนฝั่งสยามเซ็นเตอร์คือรันเวย์ดั้งเดิมของเมือง ครอปท็อป ยีนส์เอวต่ำ กระเป๋าใบใหญ่กับผ้าใบขาว ใครเดินช้ากล้องจับได้ทั้งวัน</p><h3>ไปยังไง</h3><p>ลง BTS สยาม ทางออก 2–4 แล้วเดินเข้าซอยหรือใช้สะพานเชื่อมห้าง ไม่ต้องต่อรถเพิ่ม</p><h3>ไปเมื่อไหร่</h3><p>ช่วง 16:00–18:30 แสงเฉียงสวย แดดไม่แรงเท่าเที่ยง คนเริ่มเยอะแต่ยังเดินถ่ายรูปได้ หลบวันฝนฉ่ำเพราะซอยระบายน้ำช้า</p>"
         },
-        seoul: {
-          where: "Korea — Hongdae",
-          name: "SEOUL",
-          notes: "ฮงแดคือห้องทดลองของคลีนสตรีท โทนนิวทรัลตัดรายละเอียดเล็กๆ อย่างกิ๊บและเครื่องประดับมินิมอล ลุคดูแพงโดยไม่ต้องตะโกน — สาวไทยเบิ้ลสไตล์นี้ที่สยามบ่อยมาก.",
-          img: "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=1000&q=80"
+        "spot-siam-center": {
+          kicker: "Bangkok Street Map",
+          title: "SIAM CENTER",
+          meta: "Siam Center / Discovery · BTS สยาม",
+          img: "images/spot-siam-center.jpg",
+          alt: "ลุคเดินสยามเซ็นเตอร์และสยามดิสคัฟเวอรี่",
+          html: "<h3>ดูอะไร</h3><p>โถงสูงแสงสวย แอร์เย็นพอให้ใส่เลเยอร์ได้โดยไม่ละลาย ลุคคลีนที่มีเครื่องประดับเล็กๆ ถ่ายแล้วเดินต่อไปดิสคัฟเวอรี่หรือพารากอนได้ในรอบเดียว</p><h3>ไปยังไง</h3><p>ลง BTS สยาม ใช้สะพานเชื่อมเข้าสยามเซ็นเตอร์โดยตรง ไม่ต้องข้ามถนน</p><h3>ไปเมื่อไหร่</h3><p>ได้ทั้งวันเพราะอยู่ในห้าง แต่สายห้าม–บ่ายต้น แสงจากหลังคายังสวยและคนไม่หนาเท่าเย็นวันศุกร์</p>"
         },
-        bangkok: {
-          where: "Thailand — สยาม / MBK",
-          name: "BANGKOK",
-          notes: "สยามสกแวร์คือรันเวย์ดั้งเดิมของนิตยสารแนวนี้ ครอปท็อป ยีนส์เอวต่ำ ผ้าใบสก๊อย และกิ๊บเพชรที่เพิ่งซื้อมาจากเอ็มบีเค แดดบ่ายกับบันไดเลื่อนคือแสงสวยที่สุดในเมือง.",
-          img: "https://images.unsplash.com/photo-1513379733131-47fc74b45fc7?auto=format&fit=crop&w=1000&q=80"
+        "spot-mbk": {
+          kicker: "Bangkok Street Map",
+          title: "MBK",
+          meta: "มาบุญครอง · BTS สยาม / สนามกีฬาแห่งชาติ",
+          img: "images/spot-mbk.jpg",
+          alt: "สตรีทแฟชั่นแถวเอ็มบีเค",
+          html: "<h3>ดูอะไร</h3><p>จุดเริ่มของหลายลุคในเล่มนี้ — กิ๊บ เคส เสื้อราคาเบา ซื้อปุ๊บแต่งต่อได้เลยที่ห้าง แล้วค่อยเดินออกสกายวอล์กให้แสงธรรมชาติช่วยอีกที</p><h3>ไปยังไง</h3><p>ลง BTS สยาม เดินสกายวอล์กเข้ามาบุญครอง หรือลง BTS สนามกีฬาแห่งชาติแล้วเดินเชื่อมห้าง</p><h3>ไปเมื่อไหร่</h3><p>เปิดทุกวัน ช่วงสายถึงบ่ายเหมาะกับการช้อปของเล็ก เลี่ยงเย็นวันหยุดถ้าไม่ชอบคนเบียดที่บันไดเลื่อน</p>"
         },
-        london: {
-          where: "UK — Shoreditch",
-          name: "LONDON",
-          notes: "ลอนดอนไม่เคยวางมาร์เทนส์ลง พอร์โตเบลโลและโซดิทช์ยังเป็นแหล่งวินเทจชั้นดี แจ็กเก็ตหนัง ลายสก๊อต และเสื้อถักที่ไม่เข้าชุดแต่เข้ากัน — สตรีทที่ดูผ่านลมฝนมาแล้ว.",
-          img: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1000&q=80"
+        "spot-skywalk": {
+          kicker: "Bangkok Street Map",
+          title: "BTS SKYWALK",
+          meta: "สยาม–ชิดลม–สนามกีฬาแห่งชาติ",
+          img: "images/spot-skywalk.jpg",
+          alt: "สตรีทสแนปบนสกายวอล์กบีทีเอสสยาม",
+          html: "<h3>ดูอะไร</h3><p>ทางเดินลอยฟ้าคือรันเวย์ฟรี แสงบ่ายสวย วิวรถและหลังคาทางเดินช่วยให้สแนปมีพื้นหลังเมืองโดยไม่ต้องจัดฉาก ระวังเลือกรองเท้าที่เดินได้จริง</p><h3>ไปยังไง</h3><p>ลง BTS สยาม ชิดลม หรือสนามกีฬาแห่งชาติ แล้วเดินบนสกายวอล์กที่เชื่อมสามสถานีนี้ ไม่มีค่าโดยสารเพิ่ม</p><h3>ไปเมื่อไหร่</h3><p>หลัง 16:00 แดดอ่อนลง แสงเฉียงตัดกับกระจกและราวทางเดิน เที่ยงร้อนมากและแสงแข็ง</p>"
         },
-        paris: {
-          where: "France — Le Marais",
-          name: "PARIS",
-          notes: "ปารีสไม่ได้มีแค่แบรนด์หรู ริมคลองแซงต์มาร์แต็งคนใส่เสื้อคลุมยาวโทนนู้ด ตัดรองเท้าสีจัด ดูเหมือนยังไม่แต่งแต่กล้องจับแล้วกลายเป็นปก.",
-          img: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80"
+        "spot-samyan": {
+          kicker: "Bangkok Street Map",
+          title: "SAMYAN",
+          meta: "สามย่านมิตรทาวน์ · MRT สามย่าน",
+          img: "images/spot-samyan.jpg",
+          alt: "สตรีทสไตล์สามย่านมิตรทาวน์",
+          html: "<h3>ดูอะไร</h3><p>ย่านนิสิตที่ลุคคลีนตัดสตรีทได้ naturally จุดพักก่อนวนกลับสยาม โทนสีไม่ฉูด แต่รายละเอียดที่รองเท้ากับกระเป๋าทำให้กล้องจับ</p><h3>ไปยังไง</h3><p>ลง MRT สามย่าน แล้วเดินเข้ามิตรทาวน์ได้จากทางออกสถานีโดยตรง ไม่ต้องต่อวิน</p><h3>ไปเมื่อไหร่</h3><p>เย็นวันธรรมดาคนพอดี บรรยากาศไม่เร่ง เสาร์บ่ายก็ดีถ้าอยากได้แสงจากโถงและคาเฟ่</p>"
         },
-        newyork: {
-          where: "USA — SoHo / Downtown",
-          name: "NEW YORK",
-          notes: "นิวยอร์กคือสตรีทแบบไม่ตั้งใจที่ตั้งใจมาก ฮู๊ดโอเวอร์ไซส์ หมวกแก๊ป กางเกงทรงกว้าง เดินข้ามบล็อกไปทำงานแต่ดูเหมือนถ่ายแบบอยู่แล้ว.",
-          img: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=1000&q=80"
+        "spot-chatuchak": {
+          kicker: "Bangkok Street Map",
+          title: "CHATUCHAK",
+          meta: "ตลาดนัดจตุจักร / JJ · BTS หมอชิต / MRT กำแพงเพชร",
+          img: "images/spot-chatuchak.jpg",
+          alt: "ล่าวินเทจที่ตลาดนัดจตุจักร",
+          html: "<h3>ดูอะไร</h3><p>เสาร์–อาทิตย์ทั้งวัน สำหรับเสื้อมือสอง ยีนส์ กระเป๋า และซอยที่เดินแล้วกล้องได้บรรยากาศตลาด รายละเอียดโซนและราคาอยู่ในคู่มือ JJ Vintage Hunt</p><h3>ไปยังไง</h3><p>ลง BTS หมอชิต แล้วเดินต่อเข้าตลาด หรือลง MRT กำแพงเพชรซึ่งชิดประตูตลาดมากกว่า</p><h3>ไปเมื่อไหร่</h3><p>เช้าวันเสาร์ 09:00–11:00 ก่อนแดดจัดและซอยตัน อาทิตย์บ่ายคนแน่นสุด ถ่ายรูปกับต่อราคาจะรีบกว่า</p>"
         },
-        copenhagen: {
-          where: "Denmark — Nørrebro",
-          name: "COPENHAGEN",
-          notes: "สคานดิเนเวียไม่ได้มีแค่มินิมอล นอร์เรโบรมีเลเยอร์ไหมพรม โทนเอิร์ธ และจักรยานที่กลายเป็นส่วนหนึ่งของลุค เรียบ แต่รายละเอียดที่ข้อมือกับรองเท้าไม่เคยเรียบ.",
-          img: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80"
+        "spot-jj-green": {
+          kicker: "Bangkok Street Map",
+          title: "JJ GREEN",
+          meta: "เจเจ กรีน ข้างจตุจักร · ศุกร์–อาทิตย์เย็น",
+          img: "images/spot-jj-green.jpg",
+          alt: "บรรยากาศวินเทจที่ JJ Green",
+          html: "<h3>ดูอะไร</h3><p>ตลาดข้างจตุจักร บรรยากาศชิลล์กว่าในตลาดใหญ่ เหมาะกับวินเทจ ของสะสม และเดินต่อหลังตลาดใหญ่เริ่มอ่อนแรง</p><h3>ไปยังไง</h3><p>ลง BTS หมอชิต หรือ MRT กำแพงเพชร แล้วเดินต่อจากจตุจักรไปฝั่ง JJ Green ไม่ไกล ใช้เวลาเดินไม่กี่นาที</p><h3>ไปเมื่อไหร่</h3><p>เย็นวันศุกร์ถึงอาทิตย์ แสงไฟเริ่มสว่าง เดินสบายกว่าในซอยจตุจักรตอนบ่าย</p>"
         },
-        lagos: {
-          where: "Nigeria — Victoria Island",
-          name: "LAGOS",
-          notes: "เลกอสเอาลายแอนคาราและสีจัดมาชนกับสตรีทแวร์สากล เครื่องประดับใหญ่ ทรงผมเป็นงานศิลป์ และความกล้าที่ใช้สี — ฉบับนี้ยืมความกล้าตรงนั้นมาทั้งเล่ม.",
-          img: "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?auto=format&fit=crop&w=1000&q=80"
+        "spot-ari": {
+          kicker: "Bangkok Street Map",
+          title: "ARI",
+          meta: "อารีย์ · BTS อารีย์",
+          img: "images/spot-ari.jpg",
+          alt: "สตรีทสไตล์ย่านอารีย์",
+          html: "<h3>ดูอะไร</h3><p>ซอยร่ม คาเฟ่ และลุคที่ไม่ต้องตะโกน โทนเอิร์ธ รองเท้าหนังกลับ เสื้อบางที่ใส่ในร้านได้ทั้งบ่าย สตรีทแบบผู้ใหญ่ยังชิคอยู่</p><h3>ไปยังไง</h3><p>ลง BTS อารีย์ แล้วเดินซอยอารีย์ 1–2 และถนนพหลโยธินฝั่งร้านกาแฟ ทุกอย่างอยู่ในระยะเดิน</p><h3>ไปเมื่อไหร่</h3><p>บ่ายวันเสาร์หรือเย็นวันธรรมดา แสงนิ่ม คนในซอยไม่หนาเท่าสยาม เหมาะกับสแนปที่ไม่เร่ง</p>"
+        },
+        "spot-talat-noi": {
+          kicker: "Bangkok Street Map",
+          title: "TALAT NOI",
+          meta: "ตลาดน้อย · MRT วัดมังกร / สนามไชย",
+          img: "images/spot-talat-noi.jpg",
+          alt: "สตรีทสไตล์ตลาดน้อย",
+          html: "<h3>ดูอะไร</h3><p>กำแพงสี ซอยแคบ และพื้นหลังเมืองเก่าที่ทำให้ลุควินเทจดูมีเรื่อง ถ่ายกับกำแพงและบันไดเก่าได้สแนปที่ไม่ได้อยู่ในห้าง</p><h3>ไปยังไง</h3><p>ลง MRT วัดมังกร หรือสนามไชย แล้วเดินเข้าซอยเจริญกรุง–ตลาดน้อย ถนนแคบ แนะนำเดินหรือใช้มอเตอร์ไซค์รับจ้างช่วงสั้น</p><h3>ไปเมื่อไหร่</h3><p>เช้าวันธรรมดาแสงนิ่ม คนยังไม่แน่น เสาร์สายเริ่มมีคนถ่ายรูปมากขึ้น</p>"
+        },
+        "snap-main": {
+          kicker: "Girl of the month · สาวสยาม",
+          title: "น้องมายด์, 19, นักศึกษา",
+          meta: "ถ่าย 07 NOV 26 · บันไดทางเชื่อมสยามสกแวร์",
+          img: "images/snap-main.jpg",
+          alt: "น้องมายด์ นักศึกษา 19 ปี ที่บันไดสยามสกแวร์",
+          html: "<h3>ชุดที่ใส่</h3><ul><li>เสื้อครอปชมพูอ่อน ลายเพชรเล็กตรงอก</li><li>กระโปรงยีนส์สั้นปลายรุ่ย</li><li>สร้อยโซ่เงินยาวคาดสะโพก</li><li>กิ๊บพาสเทลหลายอันปักไม่เป็นคู่</li><li>สร้อยคอเงินจี้เล็ก</li><li>รองเท้าผ้าใบแพลตฟอร์มขาว–ชมพู</li></ul><h3>ที่ถ่าย</h3><p>บันไดทางเชื่อมแถวสยามสกแวร์ช่วงเย็น แสงไฟจากด้านบนกับราวสแตนเลสช่วยให้ลุคชมพูไม่แบน</p><h3>ทิปสไตล์</h3><p>กิ๊บไม่ต้องสีเดียวกัน ยิ่งสุ่มยิ่งดูตั้งใจ ชมพูทั้งชุดแต่แยกโทนเสื้อกับรองเท้าจะไม่ชนกัน เหมาะกับคนที่เดินจากเอ็มบีเคแล้วอยากได้สแนปทันที</p>"
+        },
+        "snap-fah": {
+          kicker: "New Face",
+          title: "น้องฟ้า, 21, บาริสต้า",
+          meta: "ถ่ายเดือนนี้ · ถนนคนเดินย่านในเมือง",
+          img: "images/snap-a.jpg",
+          alt: "พอร์เทรต น้องฟ้า, 21, บาริสต้า",
+          html: "<h3>ชุดที่ใส่</h3><ul><li>คาร์ดิแกนไหมพรมสีเบจ</li><li>เสื้อสายเดี่ยวลูกไม้ขาว</li><li>สร้อยเงินสามชั้น ความยาวไม่เท่ากัน</li><li>ต่างหูห้อยเล็ก</li><li>กระเป๋าสะพายสายดำ</li></ul><h3>ที่ถ่าย</h3><p>บนทางเท้าซอยร่มใกล้ย่านคาเฟ่ แสงธรรมชาติตกที่หน้า ลุคนี้ไม่ฉูดแต่กล้องจับรายละเอียดเครื่องประดับได้ชัด</p><h3>ทิปสไตล์</h3><p>เลเยอร์บางกับลูกไม้ทำให้ลุคไม่เรียบเกินไป เครื่องเงินหลายชั้นคือจุดโฟกัส เหมาะกับคนที่ทำงานร้านกาแฟแล้วยังอยากดูเหมือนออกมาถ่ายแบบ</p>"
+        },
+        "snap-phu": {
+          kicker: "Boy of the month · หนุ่มจตุจักร",
+          title: "น้องภู, 23, ร้านวินเทจออนไลน์",
+          meta: "ถ่ายวันเสาร์ · ซอยเสื้อมือสองจตุจักร",
+          img: "images/snap-b.jpg",
+          alt: "พอร์เทรต น้องภู, 23, ร้านวินเทจออนไลน์",
+          html: "<h3>ชุดที่ใส่</h3><ul><li>หมวกบีนนี่เทา</li><li>ต่างหูห่วงเล็กข้างเดียว</li><li>เสื้อเชิ้ตยีนส์เปิดค้างไว้</li><li>ทีเชิ้ตวินเทจสีน้ำตาลลายดอกทานตะวัน ที่เพิ่งเล็งในตลาด</li><li>กางเกงโทนเข้มที่เดินซอยได้ทั้งวัน</li></ul><h3>ที่ถ่าย</h3><p>ในซอยเสื้อมือสองจตุจักร ราวผ้าและแสงใต้หลังคากันสาดเป็นพื้นหลังให้เอง ไม่ต้องจัดฉาก</p><h3>ทิปสไตล์</h3><p>เสื้อในที่มีลายทำให้เชิ้ตเปิดแล้วมีจุดโฟกัส หมวกช่วยเก็บลุคให้ครบโดยไม่ร้อนเกิน ถ่ายในตลาดแล้วเดินต่อได้เลย</p>"
+        },
+        "hunt-guide": {
+          kicker: "JJ Vintage Hunt",
+          title: "คู่มือล่าของมือสองที่จตุจักร",
+          meta: "เสาร์–อาทิตย์ · BTS หมอชิต / MRT กำแพงเพชร",
+          img: "images/hunt-hero.jpg",
+          alt: "บรรยากาศเดินล่าวินเทจในตลาดนัดจตุจักร",
+          html: "<h3>เดินโซนไหนก่อน</h3><p>เสื้อผ้าวัยรุ่นราคาเบา แถว Section 2–4 มือสองและวินเทจที่ทีมเราเล็งบ่อยอยู่ Section 5–8 และ 24–27 โดยเฉพาะ Section 27 ที่มักเป็นจุดรวมเสื้อมือสอง เครื่องประดับ หมวก กระเป๋าใบเล็ก วน Section 8–10 เสร็จแล้วไปต่อ JJ Green ช่วงเย็นถ้ายังมีแรง</p><h3>ราคาที่เจอบ่อย</h3><p>ไม่ใช่เรตราชการ เป็นช่วงที่เดินแล้วเจอซ้ำๆ ทีเชิ้ตมือสอง 100–350 บาท วินเทจลายหายาก 350–1,200 ยีนส์ 250–800 กระเป๋า 150–700 แจ็กเก็ต 400–1,500 ถ้าถูกกว่านี้ยิ่งดี ถ้าแพงกว่าให้ดูสภาพและลาย</p><h3>ต่อราคายังไง</h3><p>ยิ้มก่อน ถามราคา ถ้าจะซื้อหลายชิ้นขอเป็นชุด เริ่มต่ำกว่าที่เรียกประมาณ 20–30% อย่ากดจนร้านไม่คุ้ม เงินสดยังคุยง่าย ของชิ้นเล็กหรือราคาถูกอยู่แล้วไม่ต้องต่อหนัก ไม่ไหวก็ยิ้มแล้วเดินต่อ</p><h3>ไปเมื่อไหร่ ไปยังไง</h3><p>เช้าวันเสาร์ 09:00–11:00 ดีสุด ลง BTS หมอชิต แล้วเดินเข้าตลาด หรือลง MRT กำแพงเพชรซึ่งชิดประตูมากกว่า เลี่ยงอาทิตย์บ่ายถ้าไม่ชอบคนเบียด หลัง 16:00 อากาศดีขึ้นบ้างแต่ของดีอาจถูกเลือกไปแล้ว</p>"
+        },
+        "trend-01": {
+          kicker: "Trend Check 01",
+          title: "ยีนส์เอวต่ำที่บันไดสยาม",
+          meta: "LOW-RISE AT SIAM",
+          img: "images/spot-siam-square.jpg",
+          alt: "เทรนด์ยีนส์เอวต่ำที่สยาม",
+          html: "<h3>ทำไมถึงปังเดือนนี้</h3><p>ยีนส์เอวต่ำกลับมาคู่เสื้อครอปสั้นที่ซอยสยามอีกครั้ง ของเก่าในตู้ดึงมาใส่ได้เลย ไม่ต้องรอของใหม่ เดินบันไดเลื่อนแล้วยังชนะกล้องอยู่ดี</p><h3>ใส่ยังไง</h3><p>อย่าดึงเสื้อยาวมาบังเอว ให้ครอปจบเหนือขอบกางเกง รองเท้าผ้าใบหรือแพลตฟอร์มช่วยไม่ให้ลุคดูสั้นเกินไป</p>"
+        },
+        "trend-02": {
+          kicker: "Trend Check 02",
+          title: "กิ๊บเพชรจากเอ็มบีเค",
+          meta: "RHINESTONE CLIPS",
+          img: "images/snap-main.jpg",
+          alt: "เทรนด์กิ๊บเพชรและกิ๊บสี",
+          html: "<h3>ทำไมถึงปังเดือนนี้</h3><p>กิ๊บวับหรือกิ๊บสีพาสเทลติดข้างละหลายอันเป็นไฮไลต์ที่กล้องจับได้แม้เดินสกายวอล์กเร็ว ของเล็กจากเอ็มบีเคที่เปลี่ยนทรงผมธรรมดาให้ดูตั้งใจ</p><h3>ใส่ยังไง</h3><p>ไม่ต้องเข้าชุดกันทั้งหัว เลือก 3–5 อันคละสี ปักไม่สมมาตรจะดูเป็นสตรีทมากกว่าจัดมาจากร้านทำผม</p>"
+        },
+        "trend-03": {
+          kicker: "Trend Check 03",
+          title: "เสื้อวินเทจจากจตุจักร",
+          meta: "JJ VINTAGE TEE",
+          img: "images/snap-b.jpg",
+          alt: "เทรนด์เสื้อวินเทจจากจตุจักร",
+          html: "<h3>ทำไมถึงปังเดือนนี้</h3><p>ลายเก่า สีซีดพอดี ใส่ทับเลเยอร์หรือใส่เดี่ยวกับยีนส์ ของที่ได้มามีเรื่องเล่า และราคาที่จตุจักรยังจับต้องได้ถ้าต่ออย่างมีมารยาท</p><h3>ใส่ยังไง</h3><p>เปิดเชิ้ตหรือเสื้อบางทับเพื่อโชว์ลาย อย่าอัดรีดจนดูใหม่เกินไป รอยซีดคือส่วนหนึ่งของลุค</p>"
+        },
+        "trend-04": {
+          kicker: "Trend Check 04",
+          title: "กระเป๋ามินิใบจิ๋ว",
+          meta: "MICRO BAG",
+          img: "images/spot-siam-center.jpg",
+          alt: "เทรนด์กระเป๋ามินิ",
+          html: "<h3>ทำไมถึงปังเดือนนี้</h3><p>ใส่ได้แค่ลิปกับมือถือ แต่เดินผ่านสยามเซ็นเตอร์แล้วต้องหัน เป็นจุดจบของลุคที่ชุดเรียบอยู่แล้ว</p><h3>ใส่ยังไง</h3><p>สะพายสั้นให้อยู่กลางลำตัว หรือถือไว้ในเฟรมรูป ถ้าต้องเดินจตุจักรทั้งวันแนะนำมีถุงผ้าพับเก็บในนั้นด้วย</p>"
+        },
+        "trend-05": {
+          kicker: "Trend Check 05",
+          title: "เสื้อตาข่ายเลเยอร์",
+          meta: "MESH ON TOP",
+          img: "images/cover.jpg",
+          alt: "เทรนด์เสื้อตาข่ายเลเยอร์",
+          html: "<h3>ทำไมถึงปังเดือนนี้</h3><p>ใส่ทับสายเดี่ยวหรือครอป ตัดกับแอร์ห้างและแดดสกายวอล์ก โปร่งแต่ยังมีชั้น ดูยุค 2000 โดยไม่ต้องจัดเต็มทั้งตัว</p><h3>ใส่ยังไง</h3><p>เลือกตาข่ายไม่รัดเกิน โชว์สายด้านในนิดเดียว ถ้าเดินกลางแดดให้มีเสื้อบางอีกชั้นในกระเป๋า</p>"
+        },
+        "trend-06": {
+          kicker: "Trend Check 06",
+          title: "รองเท้าที่เดินตลาดได้ทั้งวัน",
+          meta: "WALKABLE KICKS",
+          img: "images/spot-skywalk.jpg",
+          alt: "เทรนด์รองเท้าผ้าใบที่เดินได้จริง",
+          html: "<h3>ทำไมถึงปังเดือนนี้</h3><p>ผ้าใบโทนแมตช์ชุด สวยแต่ต้องลุยจตุจักรและสกายวอล์กได้ ไม่ใช่แค่ถ่ายแล้วเปลี่ยน ความชิคเดือนนี้คืออยู่กับรองเท้าคู่เดิมจนเย็น</p><h3>ใส่ยังไง</h3><p>แพลตฟอร์มหรือโทนตัดสีชุดได้ แต่ลองเดินรอบห้างก่อน ถ้าปวดตั้งแต่สยาม จะไปไม่ถึงหมอชิต</p>"
+        },
+        "trend-07": {
+          kicker: "Trend Check 07",
+          title: "เครื่องเงินซ้อนหลายชั้น",
+          meta: "SILVER STACK",
+          img: "images/snap-a.jpg",
+          alt: "เทรนด์เครื่องเงินหลายชั้น",
+          html: "<h3>ทำไมถึงปังเดือนนี้</h3><p>สร้อย แหวน กำไลซ้อนกัน วับใต้แสงโถงดิสคัฟเวอรี่โดยไม่ต้องมีโลโก้ใหญ่ ทำให้ลุคเรียบมีจุดโฟกัส</p><h3>ใส่ยังไง</h3><p>ซ้อนสร้อยสามความยาวไม่ให้จี้ชนกัน กำไลไม่ต้องคู่ เหลือพื้นที่ผิวบ้าง จะได้ไม่ดูหนักเกิน</p>"
+        },
+        "trend-08": {
+          kicker: "Trend Check 08",
+          title: "เหลืองตัดชมพูนีออน",
+          meta: "Y2K COLOR CLASH",
+          img: "images/cover.jpg",
+          alt: "เทรนด์สีเหลืองตัดชมพูแบบยุค 2000",
+          html: "<h3>ทำไมถึงปังเดือนนี้</h3><p>สีปก STREETZ เล่มแรกคือสีที่ควรมีบนตัวด้วย เหลืองตัดชมพูทำให้สแนปอ่านจากระยะไกลได้ กล้าแล้วปังที่สยาม</p><h3>ใส่ยังไง</h3><p>เลือกสีใดสีหนึ่งเป็นตัวหลัก อีกสีอยู่ที่กระโปรง ถุงเท้า หรือรองเท้า ไม่ต้องทุกชิ้นฉูดเท่ากัน ขาวหรือเงินช่วยคั่นโทน</p>"
+        },
+        "next-tokyo": {
+          kicker: "Coming next issue",
+          title: "TOKYO HARAJUKU #002",
+          meta: "ฉบับหน้า · ฮาราจูกุ / ทาเคชิตะ",
+          img: "images/next-tokyo.jpg",
+          alt: "ปกตัวอย่าง STREETZ ฉบับ 002 โตเกียว ฮาราจูกุ",
+          html: "<h3>เล่มหน้าไปไหน</h3><p>ทีม STREETZ จะไปเดินทาเคชิตะและฮาราจูกุ เก็บเลเยอร์จัด ผมสีสด สนับคู่กระโปรงบอลลูน แล้วลงสแนปมาทั้งฉบับ ให้คิวไว้เลยว่า #002 คือโตเกียว</p><h3>คาดหวังอะไร</h3><p>แผนที่จุดถ่ายรอบฮาราจูกุ สตรีทสแนปแห่งเดือน และเทรนด์ที่เห็นบนถนนจริง ไม่ใช่บนรันเวย์ ฉบับกรุงเทพเป็นแค่จุดตั้งต้น</p>"
         }
       };
 
-      const pills = document.querySelectorAll(".pill");
-      const cards = document.querySelectorAll(".city-card");
-      const feat = document.getElementById("featureCity");
+      var detail = document.getElementById("detail");
+      var detailImg = document.getElementById("detailImg");
+      var detailClose = document.getElementById("detailClose");
+      var lastFocus = null;
 
-      function showFeat(key) {
-        const n = notes[key];
-        if (!n) return;
-        document.getElementById("featImg").src = n.img;
-        document.getElementById("featImg").alt = "สตรีทสแนป " + n.name;
-        document.getElementById("featWhere").textContent = n.where;
-        document.getElementById("featName").textContent = n.name;
-        document.getElementById("featNotes").textContent = n.notes;
-        feat.classList.add("open");
-        cards.forEach(function (c) {
-          c.classList.toggle("is-on", c.getAttribute("data-city") === key);
+      function isDetailHash(h) {
+        return !!(h && DETAILS[h]);
+      }
+
+      function fill(id) {
+        var d = DETAILS[id];
+        if (!d) return false;
+        document.getElementById("detailKicker").textContent = d.kicker;
+        document.getElementById("detailTitle").textContent = d.title;
+        document.getElementById("detailMeta").textContent = d.meta;
+        document.getElementById("detailHtml").innerHTML = d.html;
+        detailImg.alt = d.alt;
+        detailImg.onerror = function () { detailImg.onerror = null; };
+        detailImg.src = d.img;
+        detail.setAttribute("aria-labelledby", "detailTitle");
+        return true;
+      }
+
+      function getFocusable() {
+        return Array.prototype.slice.call(
+          detail.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+        ).filter(function (el) {
+          return !el.disabled && el.offsetParent !== null;
         });
       }
 
-      pills.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          pills.forEach(function (p) { p.classList.remove("active"); });
-          btn.classList.add("active");
-          const f = btn.getAttribute("data-filter");
-          cards.forEach(function (c) {
-            const match = f === "all" || c.getAttribute("data-city") === f;
-            c.classList.toggle("hidden", !match);
-          });
-          if (f === "all") {
-            feat.classList.remove("open");
-            cards.forEach(function (c) { c.classList.remove("is-on"); });
+      function openDetail(id, fromHash) {
+        if (!fill(id)) return;
+        lastFocus = document.activeElement;
+        detail.hidden = false;
+        detail.classList.add("open");
+        document.body.classList.add("detail-open");
+        detailClose.focus();
+        if (!fromHash && location.hash !== "#" + id) {
+          history.pushState({ detail: id }, "", "#" + id);
+        }
+      }
+
+      function closeDetail() {
+        if (!detail.classList.contains("open")) return;
+        detail.classList.remove("open");
+        detail.hidden = true;
+        document.body.classList.remove("detail-open");
+        if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+        if (isDetailHash(location.hash.replace(/^#/, ""))) {
+          if (history.state && history.state.detail) {
+            history.pushState({ detail: null }, "", location.pathname + location.search);
           } else {
-            showFeat(f);
+            history.replaceState({ detail: null }, "", location.pathname + location.search);
+          }
+        }
+      }
+
+      function applyHash() {
+        var id = (location.hash || "").replace(/^#/, "");
+        if (isDetailHash(id)) openDetail(id, true);
+        else if (detail.classList.contains("open")) {
+          detail.classList.remove("open");
+          detail.hidden = true;
+          document.body.classList.remove("detail-open");
+        }
+      }
+
+      document.querySelectorAll("[data-detail]").forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          if (e.target.closest("a.more-tag")) return;
+          var id = el.getAttribute("data-detail");
+          if (!id) return;
+          e.preventDefault();
+          openDetail(id);
+        });
+        el.addEventListener("keydown", function (e) {
+          if (e.target.closest("a.more-tag")) return;
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openDetail(el.getAttribute("data-detail"));
           }
         });
       });
 
-      cards.forEach(function (c) {
-        c.addEventListener("click", function () {
-          const key = c.getAttribute("data-city");
-          pills.forEach(function (p) {
-            p.classList.toggle("active", p.getAttribute("data-filter") === key);
-          });
-          showFeat(key);
-          feat.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      document.querySelectorAll("a.more-tag").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+          var id = (a.getAttribute("href") || "").replace(/^#/, "");
+          if (!isDetailHash(id)) return;
+          e.preventDefault();
+          openDetail(id);
         });
       });
 
-      document.getElementById("closeFeat").addEventListener("click", function () {
-        feat.classList.remove("open");
-        cards.forEach(function (c) { c.classList.remove("is-on"); });
-        pills.forEach(function (p) {
-          p.classList.toggle("active", p.getAttribute("data-filter") === "all");
-        });
+      detailClose.addEventListener("click", function () { closeDetail(); });
+      detail.querySelector("[data-close]").addEventListener("click", function () { closeDetail(); });
+
+      document.addEventListener("keydown", function (e) {
+        if (!detail.classList.contains("open")) return;
+        if (e.key === "Escape") {
+          e.preventDefault();
+          closeDetail();
+          return;
+        }
+        if (e.key === "Tab") {
+          var list = getFocusable();
+          if (!list.length) return;
+          var first = list[0], last = list[list.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
       });
 
-      const toggle = document.getElementById("navToggle");
-      const links = document.getElementById("navLinks");
+      window.addEventListener("hashchange", applyHash);
+      window.addEventListener("popstate", applyHash);
+
+      var toggle = document.getElementById("navToggle");
+      var links = document.getElementById("navLinks");
       toggle.addEventListener("click", function () {
         links.classList.toggle("open");
       });
@@ -1455,20 +2160,22 @@
         a.addEventListener("click", function () { links.classList.remove("open"); });
       });
 
-      const lb = document.getElementById("lightbox");
-      const lbImg = document.getElementById("lbImg");
-      document.querySelectorAll(".mini-cover").forEach(function (el) {
-        el.addEventListener("click", function () {
-          const img = el.querySelector("img");
-          lbImg.src = img.src;
-          lbImg.alt = img.alt;
-          lb.classList.add("open");
+      var pills = document.querySelectorAll(".pill");
+      var cards = document.querySelectorAll(".city-card");
+      pills.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          pills.forEach(function (p) { p.classList.remove("active"); });
+          btn.classList.add("active");
+          var f = btn.getAttribute("data-filter");
+          cards.forEach(function (c) {
+            var match = f === "all" || c.getAttribute("data-area") === f;
+            c.classList.toggle("hidden", !match);
+          });
         });
       });
-      lb.addEventListener("click", function () { lb.classList.remove("open"); });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") lb.classList.remove("open");
-      });
+
+      applyHash();
     })();
   </script>
 </body>
