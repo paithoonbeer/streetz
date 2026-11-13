@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paithoonbeer.github.io/streetz/sitemap.xml

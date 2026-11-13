@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="STREETZ">
+  <rect width="32" height="32" fill="#111111"/>
+  <rect x="3.2" y="4.4" width="24.4" height="24.4" fill="#ff2d8b"/>
+  <rect x="2" y="2" width="24.4" height="24.4" fill="#ffe200"/>
+  <text x="14.1" y="22.6" text-anchor="middle" font-family="Bagel Fat One, Arial Black, sans-serif" font-size="20" fill="#111111" transform="rotate(-6 14.1 16)">S</text>
+</svg>
